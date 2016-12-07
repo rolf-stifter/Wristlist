@@ -1,0 +1,12 @@
+<resources>
+    <string name="app_name">SmartwatchAppLayout</string>
+
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+
+    <string name="action_settings">Settings</string>
+    <string name="orders">Bestellingen</string>
+    <string name="profile">Gegevens</string>
+    <string name="sign_off">Afmelden</string>
+    <string name="username">Stephane Oris</string>
+</resources>
