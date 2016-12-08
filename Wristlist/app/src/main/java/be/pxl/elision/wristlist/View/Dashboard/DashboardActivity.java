@@ -1,6 +1,7 @@
 package be.pxl.elision.wristlist.View.Dashboard;
 
 import android.os.Bundle;
+
 import be.pxl.elision.wristlist.R;
 import be.pxl.elision.wristlist.View.BaseDrawerActivity;
 
