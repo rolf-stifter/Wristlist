@@ -17,6 +17,7 @@ import java.util.List;
 import be.pxl.elision.wristlist.Model.Orders.DummyOrder;
 import be.pxl.elision.wristlist.R;
 import be.pxl.elision.wristlist.View.Profile.ProfileActivity;
+import be.pxl.elision.wristlist.View.Utility.OrdersAdapter;
 
 /**
  * Created by 11400081 on 8/12/2016.

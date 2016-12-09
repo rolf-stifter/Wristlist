@@ -1,4 +1,4 @@
-package be.pxl.elision.wristlist.View.Dashboard;
+package be.pxl.elision.wristlist.View.Utility;
 
 import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
