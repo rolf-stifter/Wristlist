@@ -18,22 +18,26 @@ import be.pxl.elision.wristlist.View.Profile.ProfileActivity;
  * Created by Timothy Vanderaerden on 8/12/16.
  */
 
-public class BaseDrawerActivity extends AppCompatActivity
+public abstract class BaseDrawerActivity extends AppCompatActivity
         implements NavigationView.OnNavigationItemSelectedListener {
 
-    protected FrameLayout frameLayout;
-    protected DrawerLayout drawer;
-    protected NavigationView navigationView;
+    private FrameLayout appBarFrameLayout;
+    private DrawerLayout drawer;
+    private NavigationView navigationView;
+    private Toolbar toolbar;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         super.setContentView(R.layout.activity_base_drawer);
 
-        Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
-        setSupportActionBar(toolbar);
+        appBarFrameLayout = (FrameLayout) findViewById(R.id.appBarFrame);
+    }
 
-        frameLayout = (FrameLayout) findViewById(R.id.baseFrame);
+    protected void setAppBar(int layout){
+        getLayoutInflater().inflate(layout, appBarFrameLayout);
+
+        toolbar = (Toolbar) findViewById(R.id.toolbar);
 
         drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
         ActionBarDrawerToggle toggle = new ActionBarDrawerToggle(
@@ -43,6 +47,14 @@ public class BaseDrawerActivity extends AppCompatActivity
 
         navigationView = (NavigationView) findViewById(R.id.nav_view);
         navigationView.setNavigationItemSelectedListener(this);
+    }
+
+    protected void setToolbarTitle(String title) {
+        toolbar.setTitle(title);
+    }
+
+    protected void setSelectedNavigationItem(int item) {
+        navigationView.getMenu().getItem(item).setChecked(true);
     }
 
     @Override
