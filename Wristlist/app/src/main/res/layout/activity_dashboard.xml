@@ -18,11 +18,13 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:id="@+id/fragment_bestellingen"
-        class = "be.pxl.elision.wristlist.View.Dashboard.OrdersCardFragment"/>
+        class = "be.pxl.elision.wristlist.View.Dashboard.OrdersCardFragment"
+        />
 
     <fragment
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:id="@+id/fragment_profile"
-        class = "be.pxl.elision.wristlist.View.Dashboard.ProfileCardFragment"/>
+        class = "be.pxl.elision.wristlist.View.Dashboard.ProfileCardFragment"
+        android:layout_marginTop="16dp"/>
 </LinearLayout>
