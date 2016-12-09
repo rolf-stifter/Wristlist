@@ -1,6 +1,7 @@
 package be.pxl.elision.wristlist.View.Dashboard;
 
 import android.app.Fragment;
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
@@ -15,6 +16,7 @@ import java.util.List;
 
 import be.pxl.elision.wristlist.Model.Orders.DummyOrder;
 import be.pxl.elision.wristlist.R;
+import be.pxl.elision.wristlist.View.Profile.ProfileActivity;
 
 /**
  * Created by 11400081 on 8/12/2016.
@@ -41,6 +43,14 @@ public class OrdersCardFragment extends Fragment{
         LinearLayout details = (LinearLayout) card.findViewById(R.id.card_information);
         View childDetails = getActivity().getLayoutInflater().inflate(R.layout.orders_card, null);
 
+        //Click header card
+        details.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent profile = new Intent(getActivity(), ProfileActivity.class);
+                startActivity(profile);
+            }
+        });
         mRecyclerView = (RecyclerView) childDetails.findViewById(R.id.my_recycler_view);
 
         // use this setting to improve performance if you know that changes

@@ -5,37 +5,37 @@ package be.pxl.elision.wristlist.Model.Orders;
  */
 
 public class DummyProduct {
-    private String naam;
-    private String prijs;
+    private String name;
+    private String price;
     private String datum;
     private int stock;
-    private String omschrijving;
+    private String description;
 
 
     public DummyProduct() {
     }
 
-    public String getNaam() {
-        return naam;
+    public String getName() {
+        return name;
     }
 
-    public void setNaam(String naam) {
-        this.naam = naam;
+    public void setName(String naam) {
+        this.name = naam;
     }
 
-    public String getPrijs() {
-        return prijs;
+    public String getPrice() {
+        return price;
     }
 
-    public void setPrijs(String prijs) {
-        this.prijs = prijs;
+    public void setPrice(String price) {
+        this.price = price;
     }
 
-    public String getDatum() {
+    public String getDate() {
         return datum;
     }
 
-    public void setDatum(String datum) {
+    public void setDate(String datum) {
         this.datum = datum;
     }
 
@@ -47,11 +47,11 @@ public class DummyProduct {
         this.stock = stock;
     }
 
-    public String getOmschrijving() {
-        return omschrijving;
+    public String getdescription() {
+        return description;
     }
 
-    public void setOmschrijving(String omschrijving) {
-        this.omschrijving = omschrijving;
+    public void setDescription(String omschrijving) {
+        this.description = omschrijving;
     }
 }
