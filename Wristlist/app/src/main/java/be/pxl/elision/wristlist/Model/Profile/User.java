@@ -10,11 +10,6 @@ public class User {
     private String title;
     private String firstName;
     private String lastName;
-    private Currency currency;
-    private Language language;
-    private String displayUid;
-    private String uid;
-    private String name;
 
     public Address getDefaultAddress() {
         return defaultAddress;
@@ -54,45 +49,5 @@ public class User {
 
     public void setLastName(String lastName) {
         this.lastName = lastName;
-    }
-
-    public Currency getCurrency() {
-        return currency;
-    }
-
-    public void setCurrency(Currency currency) {
-        this.currency = currency;
-    }
-
-    public Language getLanguage() {
-        return language;
-    }
-
-    public void setLanguage(Language language) {
-        this.language = language;
-    }
-
-    public String getDisplayUid() {
-        return displayUid;
-    }
-
-    public void setDisplayUid(String displayUid) {
-        this.displayUid = displayUid;
-    }
-
-    public String getUid() {
-        return uid;
-    }
-
-    public void setUid(String uid) {
-        this.uid = uid;
-    }
-
-    public String getName() {
-        return name;
-    }
-
-    public void setName(String name) {
-        this.name = name;
     }
 }
