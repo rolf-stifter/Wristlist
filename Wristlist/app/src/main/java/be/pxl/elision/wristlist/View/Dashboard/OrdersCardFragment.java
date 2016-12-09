@@ -44,9 +44,11 @@ public class OrdersCardFragment extends Fragment{
         View childDetails = getActivity().getLayoutInflater().inflate(R.layout.orders_card, null);
 
         //Click header card
-        details.setOnClickListener(new View.OnClickListener() {
+        LinearLayout header = (LinearLayout) card.findViewById(R.id.card_header);
+        header.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                // TODO: 9/12/2016  
                 Intent profile = new Intent(getActivity(), ProfileActivity.class);
                 startActivity(profile);
             }

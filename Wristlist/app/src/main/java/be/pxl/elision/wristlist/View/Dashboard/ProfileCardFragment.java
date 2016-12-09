@@ -1,6 +1,7 @@
 package be.pxl.elision.wristlist.View.Dashboard;
 
 import android.app.Fragment;
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -12,6 +13,7 @@ import android.widget.TextView;
 import be.pxl.elision.wristlist.Model.Profile.Address;
 import be.pxl.elision.wristlist.Model.Profile.User;
 import be.pxl.elision.wristlist.R;
+import be.pxl.elision.wristlist.View.Profile.ProfileActivity;
 
 /**
  * Created by 11400081 on 8/12/2016.
@@ -37,6 +39,16 @@ public class ProfileCardFragment extends Fragment {
         title.setText("Uw gegevens");
         ImageView icon = (ImageView) card.findViewById(R.id.card_icon);
         icon.setImageResource(R.drawable.ic_person_white);
+
+        //Click header card
+        LinearLayout header = (LinearLayout) card.findViewById(R.id.card_header);
+        header.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent profile = new Intent(getActivity(), ProfileActivity.class);
+                startActivity(profile);
+            }
+        });
 
         //Details
         LinearLayout details = (LinearLayout) card.findViewById(R.id.card_information);
