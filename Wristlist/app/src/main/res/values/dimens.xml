@@ -11,5 +11,6 @@
     <dimen name="list_3_items">120dp</dimen>
     <dimen name="list_4_items">160dp</dimen>
     <dimen name="list_5_items">180dp</dimen>
+    <dimen name="app_bar_height">256dp</dimen>
 
 </resources>

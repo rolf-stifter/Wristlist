@@ -36,7 +36,7 @@ public class ProfileCardFragment extends Fragment {
         //Card
         View card = getActivity().getLayoutInflater().inflate(R.layout.card_view, null);
         TextView title = (TextView) card.findViewById(R.id.card_title);
-        title.setText("Uw gegevens");
+        title.setText("Your profile");
         ImageView icon = (ImageView) card.findViewById(R.id.card_icon);
         icon.setImageResource(R.drawable.ic_person_white);
 

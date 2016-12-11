@@ -36,7 +36,7 @@ public class OrdersCardFragment extends Fragment{
         //Card
         View card = getActivity().getLayoutInflater().inflate(R.layout.card_view, null);
         TextView title = (TextView) card.findViewById(R.id.card_title);
-        title.setText("Bestellingen");
+        title.setText("Orders");
         ImageView icon = (ImageView) card.findViewById(R.id.card_icon);
         icon.setImageResource(R.drawable.ic_shopping_cart_white);
 
