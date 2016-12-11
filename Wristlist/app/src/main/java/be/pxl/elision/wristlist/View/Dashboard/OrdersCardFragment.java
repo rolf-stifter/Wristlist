@@ -16,7 +16,7 @@ import java.util.List;
 
 import be.pxl.elision.wristlist.Model.Orders.DummyOrder;
 import be.pxl.elision.wristlist.R;
-import be.pxl.elision.wristlist.View.Profile.ProfileActivity;
+import be.pxl.elision.wristlist.View.Orders.OrdersActivity;
 import be.pxl.elision.wristlist.View.Utility.OrdersAdapter;
 
 /**
@@ -49,8 +49,7 @@ public class OrdersCardFragment extends Fragment{
         header.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                // TODO: 9/12/2016  
-                Intent profile = new Intent(getActivity(), ProfileActivity.class);
+                Intent profile = new Intent(getActivity(), OrdersActivity.class);
                 startActivity(profile);
             }
         });
