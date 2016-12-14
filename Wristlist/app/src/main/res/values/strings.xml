@@ -30,4 +30,5 @@
 
     <!-- Buttons -->
     <string name="button_undo">Undo</string>
+    <string name="checkbox_login">Keep me logged in</string>
 </resources>
