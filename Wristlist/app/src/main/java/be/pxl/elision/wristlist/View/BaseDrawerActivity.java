@@ -10,7 +10,6 @@ import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.view.MenuItem;
 import android.widget.FrameLayout;
-import android.widget.TextView;
 import be.pxl.elision.wristlist.R;
 import be.pxl.elision.wristlist.View.Dashboard.DashboardActivity;
 import be.pxl.elision.wristlist.View.Orders.OrdersActivity;

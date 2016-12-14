@@ -1,13 +1,22 @@
 package be.pxl.elision.wristlist.View.Profile;
 
+import android.content.res.ColorStateList;
+import android.os.Build;
 import android.os.Bundle;
+import android.support.design.widget.CollapsingToolbarLayout;
 import android.support.design.widget.CoordinatorLayout;
 import android.support.design.widget.FloatingActionButton;
 import android.support.design.widget.Snackbar;
+import android.support.v4.content.ContextCompat;
+import android.support.v7.widget.Toolbar;
 import android.view.View;
+import android.view.Window;
+import android.view.WindowManager;
 import android.widget.EditText;
 import android.widget.FrameLayout;
 import android.widget.ImageView;
+import android.widget.TextView;
+
 import be.pxl.elision.wristlist.Model.Profile.Address;
 import be.pxl.elision.wristlist.Model.Profile.Country;
 import be.pxl.elision.wristlist.Model.Profile.Region;
@@ -38,6 +47,9 @@ public class ProfileActivity extends BaseDrawerActivity {
         getLayoutInflater().inflate(R.layout.activity_profile, (FrameLayout) findViewById(R.id.profileFrame));
 
         final CoordinatorLayout coordinatorLayout = (CoordinatorLayout) findViewById(R.id.appbar_profile);
+
+        // Change personal style
+        changeStyle("man");
 
         // Set profile image
         ImageView profileImage = (ImageView) findViewById(R.id.image);
@@ -132,5 +144,59 @@ public class ProfileActivity extends BaseDrawerActivity {
         cityEditText.setEnabled(enable);
         postcodeEditText.setEnabled(enable);
         phoneEditText.setEnabled(enable);
+    }
+
+    /**
+     * Change style depending on gender
+     * @param gender
+     */
+    private void changeStyle(String gender) {
+        int colorPrimary;
+        int colorAccent;
+        if (gender == "man") {
+            colorPrimary = ContextCompat.getColor(this, R.color.colorPrimaryDark);
+            colorAccent = ContextCompat.getColor(this, R.color.colorPrimary);
+        } else {
+            colorPrimary = ContextCompat.getColor(this, R.color.colorAccent);
+            colorAccent = ContextCompat.getColor(this, R.color.colorAccentDark);
+        }
+
+        CollapsingToolbarLayout collapsingToolbarLayout =
+                (CollapsingToolbarLayout) findViewById(R.id.collapsing_toolbar);
+        Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
+        FloatingActionButton actionButton = (FloatingActionButton) findViewById(R.id.fabAction);
+        TextView personalDetailsTextView = (TextView) findViewById(R.id.personalDetailsTextView);
+        TextView firstnameTextView = (TextView) findViewById(R.id.firstnameTextView);
+        TextView lastnameTextView = (TextView) findViewById(R.id.lastnameTextView);
+        TextView emailAddressTextView = (TextView) findViewById(R.id.emailAddressTextView);
+        TextView addressBookTextView = (TextView) findViewById(R.id.addressBookTextView);
+        TextView addressLineTextView = (TextView) findViewById(R.id.addressLineTextView);
+        TextView cityTextView = (TextView) findViewById(R.id.cityTextView);
+        TextView postcodeTextView = (TextView) findViewById(R.id.postcodeTextView);
+        TextView phoneTextView = (TextView) findViewById(R.id.phoneTextView);
+
+        //Set color
+        collapsingToolbarLayout.setBackgroundColor(colorPrimary);
+        toolbar.setBackgroundColor(colorPrimary);
+        actionButton.setBackgroundTintList(
+                new ColorStateList(new int[][]{new int[]{0}}, new int[]{colorPrimary}));
+        actionButton.setRippleColor(colorAccent);
+        personalDetailsTextView.setTextColor(colorPrimary);
+        firstnameTextView.setTextColor(colorAccent);
+        lastnameTextView.setTextColor(colorAccent);
+        emailAddressTextView.setTextColor(colorPrimary);
+        addressBookTextView.setTextColor(colorPrimary);
+        addressLineTextView.setTextColor(colorAccent);
+        cityTextView.setTextColor(colorAccent);
+        postcodeTextView.setTextColor(colorAccent);
+        phoneTextView.setTextColor(colorAccent);
+
+
+        // Change statusBar color
+        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.LOLLIPOP) {
+            Window window = getWindow();
+            window.addFlags(WindowManager.LayoutParams.FLAG_DRAWS_SYSTEM_BAR_BACKGROUNDS);
+            window.setStatusBarColor(colorAccent);
+        }
     }
 }
