@@ -1,5 +1,6 @@
 package be.pxl.elision.wristlist.View.Utility;
 
+import android.content.Intent;
 import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -8,6 +9,7 @@ import android.widget.TextView;
 
 import be.pxl.elision.wristlist.Model.Orders.DummyOrder;
 import be.pxl.elision.wristlist.R;
+import be.pxl.elision.wristlist.View.Order.OrderActivity;
 
 /**
  * Created by 11400081 on 8/12/2016.
@@ -44,13 +46,22 @@ public class OrdersAdapter extends RecyclerView.Adapter<OrdersAdapter.ViewHolder
 
     // Replace the contents of a view (invoked by the layout manager)
     @Override
-    public void onBindViewHolder(ViewHolder holder, int position) {
+    public void onBindViewHolder(ViewHolder holder, final int position) {
         // - get element from your dataset at this position
         // - replace the contents of the view with that element
         DummyOrder order = mDataset[position];
         holder.titleTextView.setText(order.getName());
         holder.statusTextView.setText(order.getStatus());
         holder.dateTextView.setText(order.getDate());
+        holder.itemView.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent order = new Intent(v.getContext(), OrderActivity.class);
+                order.putExtra("Orders", mDataset[position].getName());
+                //Todo pass one Order
+                v.getContext().startActivity(order);
+            }
+        });
 
     }
 

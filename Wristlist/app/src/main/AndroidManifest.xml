@@ -10,12 +10,10 @@
         android:theme="@style/AppTheme">
         <activity
             android:name=".View.Dashboard.DashboardActivity"
-            android:theme="@style/AppTheme.NoActionBar">
-        </activity>
+            android:theme="@style/AppTheme.NoActionBar"></activity>
         <activity
             android:name=".View.Profile.ProfileActivity"
-            android:theme="@style/AppTheme.NoActionBar">
-        </activity>
+            android:theme="@style/AppTheme.NoActionBar"></activity>
         <activity
             android:name=".View.Login.LoginActivity"
             android:theme="@style/AppTheme.NoActionBar">
@@ -27,8 +25,9 @@
         </activity>
         <activity
             android:name=".View.Orders.OrdersActivity"
-            android:theme="@style/AppTheme.NoActionBar">
-        </activity>
+            android:theme="@style/AppTheme.NoActionBar"></activity>
+        <activity android:name=".View.Order.OrderActivity"
+            android:theme="@style/AppTheme.NoActionBar"></activity>
     </application>
 
 </manifest>
