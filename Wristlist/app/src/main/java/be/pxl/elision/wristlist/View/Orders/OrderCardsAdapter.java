@@ -1,6 +1,7 @@
 package be.pxl.elision.wristlist.View.Orders;
 
 import android.content.Context;
+import android.content.Intent;
 import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -13,9 +14,10 @@ import android.widget.TextView;
 
 import be.pxl.elision.wristlist.Model.Orders.DummyOrder;
 import be.pxl.elision.wristlist.R;
+import be.pxl.elision.wristlist.View.Order.OrderActivity;
 
 /**
- * Created by 11400081 on 9/12/2016.
+ * @Author by Stephane Oris
  */
 
 public class OrderCardsAdapter extends RecyclerView.Adapter<OrderCardsAdapter.CardViewHolder> {
@@ -31,10 +33,15 @@ public class OrderCardsAdapter extends RecyclerView.Adapter<OrderCardsAdapter.Ca
         ImageView iconImageView;
         LinearLayout detailsCard;
         ListView productsListview;
+        LinearLayout cardHeaderLinearLayout;
 
+        /**
+         * @param v
+         */
         public CardViewHolder(View v) {
             super(v);
             //Card header
+            cardHeaderLinearLayout = (LinearLayout) v.findViewById(R.id.card_header);
             titleTextView = (TextView) v.findViewById(R.id.card_title);
             iconImageView = (ImageView) v.findViewById(R.id.card_icon);
             iconImageView.setImageResource(R.drawable.ic_shopping_cart_white);
@@ -57,7 +64,10 @@ public class OrderCardsAdapter extends RecyclerView.Adapter<OrderCardsAdapter.Ca
         }
     }
 
-    // Provide a suitable constructor (depends on the kind of dataset)
+    /**
+     * Provide a suitable constructor (depends on the kind of dataset)
+     * @param myDataset
+     */
     public OrderCardsAdapter(DummyOrder[] myDataset) {
         mDataset = myDataset;
     }
@@ -69,13 +79,28 @@ public class OrderCardsAdapter extends RecyclerView.Adapter<OrderCardsAdapter.Ca
         return new OrderCardsAdapter.CardViewHolder(itemView);
     }
 
-    // Replace the contents of a view (invoked by the layout manager)
+    /**
+     * Replace the contents of a view (invoked by the layout manager)
+     * @param holder
+     * @param position
+     */
     @Override
-    public void onBindViewHolder(OrderCardsAdapter.CardViewHolder holder, int position) {
+    public void onBindViewHolder(OrderCardsAdapter.CardViewHolder holder, final int position) {
         // - get element from your dataset at this position
         // - replace the contents of the view with that element
         DummyOrder order = mDataset[position];
         holder.titleTextView.setText(order.getName());
+
+        //Go to orderview
+        holder.cardHeaderLinearLayout.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent order = new Intent(v.getContext(), OrderActivity.class);
+                order.putExtra("Orders", mDataset[position].getName());
+                //Todo pass one Order
+                v.getContext().startActivity(order);
+            }
+        });
 
 
         //List of products size
@@ -113,7 +138,10 @@ public class OrderCardsAdapter extends RecyclerView.Adapter<OrderCardsAdapter.Ca
 
     }
 
-    // Return the size of your dataset (invoked by the layout manager)
+    /**
+     * Return the size of your dataset (invoked by the layout manager)
+     * @return
+     */
     @Override
     public int getItemCount() {
         return mDataset.length;

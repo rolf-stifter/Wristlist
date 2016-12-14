@@ -16,10 +16,10 @@ import be.pxl.elision.wristlist.Model.Orders.DummyOrder;
 import be.pxl.elision.wristlist.Model.Orders.DummyProduct;
 import be.pxl.elision.wristlist.R;
 
-/**
- * Created by 11400081 on 9/12/2016.
- */
 
+/**
+ * @Author by Stephane Oris
+ */
 public class OrdersFragment extends Fragment {
 
     private RecyclerView mRecyclerView;
@@ -27,6 +27,13 @@ public class OrdersFragment extends Fragment {
     private RecyclerView.LayoutManager mLayoutManager;
     private List<DummyOrder> ordersList;
 
+    /**
+     *
+     * @param inflater
+     * @param container
+     * @param savedInstanceState
+     * @return
+     */
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
         View view = getActivity().getLayoutInflater().inflate(R.layout.recyclerview_order, null);
         mRecyclerView = (RecyclerView) view.findViewById(R.id.order_recycler_view);

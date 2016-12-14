@@ -1,4 +1,4 @@
-package be.pxl.elision.wristlist.View.Dashboard;
+package be.pxl.elision.wristlist.View.Order;
 
 import android.app.Fragment;
 import android.content.Intent;
@@ -12,23 +12,24 @@ import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.TextView;
 
+import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.List;
 
 import be.pxl.elision.wristlist.Model.Orders.DummyOrder;
+import be.pxl.elision.wristlist.Model.Orders.DummyProduct;
 import be.pxl.elision.wristlist.R;
 import be.pxl.elision.wristlist.View.Orders.OrdersActivity;
-import be.pxl.elision.wristlist.View.Utility.OrdersAdapter;
+
 
 /**
  * @Author by Stephane Oris
  */
-
-public class OrdersCardFragment extends Fragment{
-
+public class OrderFragment extends Fragment {
     private RecyclerView mRecyclerView;
     private RecyclerView.Adapter mAdapter;
     private RecyclerView.LayoutManager mLayoutManager;
-    private List<DummyOrder> ordersList;
+    private TextView title;
 
     /**
      *
@@ -40,10 +41,24 @@ public class OrdersCardFragment extends Fragment{
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
 
 
+//        //data
+        DummyOrder dummyOrder = new DummyOrder();
+        dummyOrder.setName("Bestelling 3");
+        dummyOrder.setDate("01/01/2017");
+        dummyOrder.setStatus("In verwerking");
+
+        DummyProduct p1 = new DummyProduct();
+        p1.setName("T-shirt");
+        p1.setPrice(19.99);
+
+        DummyProduct[] products = {p1};
+        dummyOrder.setOrders( new ArrayList<DummyProduct>(Arrays.asList(products)));
+
         //Card
         View card = getActivity().getLayoutInflater().inflate(R.layout.card_view, null);
-        TextView title = (TextView) card.findViewById(R.id.card_title);
-        title.setText("Orders");
+        title = (TextView) card.findViewById(R.id.card_title);
+//        title.setText(dummyOrder.getName());
+        title.setText("Order");
         ImageView icon = (ImageView) card.findViewById(R.id.card_icon);
         icon.setImageResource(R.drawable.ic_shopping_cart_white);
 
@@ -70,25 +85,9 @@ public class OrdersCardFragment extends Fragment{
         mLayoutManager = new LinearLayoutManager(getActivity());
         mRecyclerView.setLayoutManager(mLayoutManager);
 
-        // specify an adapter (see also next example)
-        String[] myDataset ={"Bestelling 1", "Bestelling 2", "Bestelling 3"};
 
-        DummyOrder x = new DummyOrder();
-        x.setName("Bestelling 1");
-        x.setDate("24/12/2016");
-        x.setStatus("Verzonden");
 
-        DummyOrder y = new DummyOrder();
-        y.setName("Bestelling 2");
-        y.setDate("30/12/2016");
-        y.setStatus("In verwerking");
-
-        DummyOrder z = new DummyOrder();
-        z.setName("Bestelling 3");
-        z.setDate("01/01/2017");
-        z.setStatus("In verwerking");
-        DummyOrder[] orders = {x, y, z};
-        mAdapter = new OrdersAdapter(orders);
+        mAdapter = new ProductRecyclerViewAdapter(null);
         mRecyclerView.setAdapter(mAdapter);
 
 
@@ -96,4 +95,14 @@ public class OrdersCardFragment extends Fragment{
         return card;
     }
 
+    /**
+     * Set Adapter with products and set card title with name
+     * @param products
+     * @param name
+     */
+    public void NewData(List<DummyProduct> products, String name ) {
+        mAdapter = new ProductRecyclerViewAdapter(products);
+        mRecyclerView.setAdapter(mAdapter);
+        title.setText(name);
+    }
 }

@@ -11,6 +11,7 @@ import be.pxl.elision.wristlist.Model.Profile.User;
 import be.pxl.elision.wristlist.R;
 import be.pxl.elision.wristlist.View.BaseDrawerActivity;
 
+
 public class ProfileActivity extends BaseDrawerActivity {
 
     @Override

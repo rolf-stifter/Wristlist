@@ -6,8 +6,16 @@ import android.widget.FrameLayout;
 import be.pxl.elision.wristlist.R;
 import be.pxl.elision.wristlist.View.BaseDrawerActivity;
 
+
+/**
+ * @Author by Stephane Oris
+ */
 public class OrdersActivity extends BaseDrawerActivity {
 
+    /**
+     *
+     * @param savedInstanceState
+     */
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -17,6 +25,9 @@ public class OrdersActivity extends BaseDrawerActivity {
         setToolbarTitle("Orders");
     }
 
+     /**
+     * set selected navigation item on 2
+     */
     @Override
     protected void onResume() {
         super.onResume();
