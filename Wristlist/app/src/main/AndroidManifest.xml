@@ -10,7 +10,6 @@
         android:theme="@style/AppTheme">
         <activity
             android:name=".View.Dashboard.DashboardActivity"
-            android:label="@string/app_name"
             android:theme="@style/AppTheme.NoActionBar"></activity>
         <activity
             android:name=".View.Profile.ProfileActivity"
@@ -24,7 +23,11 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".View.Orders.OrdersActivity"></activity>
+        <activity
+            android:name=".View.Orders.OrdersActivity"
+            android:theme="@style/AppTheme.NoActionBar"></activity>
+        <activity android:name=".View.Order.OrderActivity"
+            android:theme="@style/AppTheme.NoActionBar"></activity>
     </application>
 
 </manifest>

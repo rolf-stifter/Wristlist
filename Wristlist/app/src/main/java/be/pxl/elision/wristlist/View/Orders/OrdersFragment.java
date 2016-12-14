@@ -1,29 +1,26 @@
-package be.pxl.elision.wristlist.View.Dashboard;
+package be.pxl.elision.wristlist.View.Orders;
 
 import android.app.Fragment;
-import android.content.Intent;
 import android.os.Bundle;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.ImageView;
-import android.widget.LinearLayout;
-import android.widget.TextView;
 
+import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.List;
 
 import be.pxl.elision.wristlist.Model.Orders.DummyOrder;
+import be.pxl.elision.wristlist.Model.Orders.DummyProduct;
 import be.pxl.elision.wristlist.R;
-import be.pxl.elision.wristlist.View.Orders.OrdersActivity;
-import be.pxl.elision.wristlist.View.Utility.OrdersAdapter;
+
 
 /**
  * @Author by Stephane Oris
  */
-
-public class OrdersCardFragment extends Fragment{
+public class OrdersFragment extends Fragment {
 
     private RecyclerView mRecyclerView;
     private RecyclerView.Adapter mAdapter;
@@ -38,29 +35,8 @@ public class OrdersCardFragment extends Fragment{
      * @return
      */
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
-
-
-        //Card
-        View card = getActivity().getLayoutInflater().inflate(R.layout.card_view, null);
-        TextView title = (TextView) card.findViewById(R.id.card_title);
-        title.setText("Orders");
-        ImageView icon = (ImageView) card.findViewById(R.id.card_icon);
-        icon.setImageResource(R.drawable.ic_shopping_cart_white);
-
-        //Details
-        LinearLayout details = (LinearLayout) card.findViewById(R.id.card_information);
-        View childDetails = getActivity().getLayoutInflater().inflate(R.layout.orders_card, null);
-
-        //Click header card
-        LinearLayout header = (LinearLayout) card.findViewById(R.id.card_header);
-        header.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Intent profile = new Intent(getActivity(), OrdersActivity.class);
-                startActivity(profile);
-            }
-        });
-        mRecyclerView = (RecyclerView) childDetails.findViewById(R.id.my_recycler_view);
+        View view = getActivity().getLayoutInflater().inflate(R.layout.recyclerview_order, null);
+        mRecyclerView = (RecyclerView) view.findViewById(R.id.order_recycler_view);
 
         // use this setting to improve performance if you know that changes
         // in content do not change the layout size of the RecyclerView
@@ -71,7 +47,7 @@ public class OrdersCardFragment extends Fragment{
         mRecyclerView.setLayoutManager(mLayoutManager);
 
         // specify an adapter (see also next example)
-        String[] myDataset ={"Bestelling 1", "Bestelling 2", "Bestelling 3"};
+        String[] myDataset = {"Bestelling 1", "Bestelling 2", "Bestelling 3"};
 
         DummyOrder x = new DummyOrder();
         x.setName("Bestelling 1");
@@ -87,13 +63,34 @@ public class OrdersCardFragment extends Fragment{
         z.setName("Bestelling 3");
         z.setDate("01/01/2017");
         z.setStatus("In verwerking");
-        DummyOrder[] orders = {x, y, z};
-        mAdapter = new OrdersAdapter(orders);
+
+        DummyProduct p1 = new DummyProduct();
+        p1.setName("T-shirt");
+        p1.setPrice(19.99);
+
+        DummyProduct p2 = new DummyProduct();
+        p2.setName("Horloge APD789");
+        p2.setPrice(99.99);
+
+        DummyProduct p3 = new DummyProduct();
+        p3.setName("Tv Samsung 158");
+        p3.setPrice(559.99);
+
+        DummyProduct p4 = new DummyProduct();
+        p4.setName("Napoleon Lemon 100st");
+        p4.setPrice(9.99);
+
+        DummyProduct[] products1 = {p1,p2};
+        DummyProduct[] products2 = {p1, p2, p3};
+        DummyProduct[] products3 = {p1,p2,p3,p4,p1,p2};
+
+        x.setOrders( new ArrayList<DummyProduct>(Arrays.asList(products1)));
+        y.setOrders( new ArrayList<DummyProduct>(Arrays.asList(products2)));
+        z.setOrders( new ArrayList<DummyProduct>(Arrays.asList(products3)));
+        DummyOrder[] orders = {x, y, z, x,y,z,x,x};
+        mAdapter = new OrderCardsAdapter(orders);
         mRecyclerView.setAdapter(mAdapter);
 
-
-        details.addView(childDetails);
-        return card;
+        return view;
     }
-
 }
