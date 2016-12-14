@@ -1,4 +1,7 @@
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<android.support.design.widget.CoordinatorLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/activity_profile"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
@@ -6,187 +9,195 @@
     android:paddingRight="@dimen/activity_horizontal_margin"
     android:paddingTop="@dimen/activity_vertical_margin">
 
-    <RelativeLayout
-        android:id="@+id/personalDetails"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content">
-
-        <TextView
-            android:id="@+id/personalDetailsTextView"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginBottom="@dimen/activity_vertical_margin"
-            android:text="@string/textview_personal_details"
-            android:textColor="@color/colorPrimaryDark"
-            android:textStyle="normal|bold"
-            android:textSize="24sp" />
-
-        <TextView
-            android:id="@+id/firstnameTextView"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_below="@id/personalDetailsTextView"
-            android:layout_marginTop="8dp"
-            android:text="@string/hint_first_name"
-            android:textAppearance="@style/TextAppearance.AppCompat.Small"
-            android:textColor="@color/colorPrimaryLight"
-            android:textAllCaps="true" />
-
-        <EditText
-            android:enabled="false"
-            android:id="@+id/firstnameEditText"
-            android:layout_below="@id/firstnameTextView"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:textAppearance="@style/TextAppearance.AppCompat.Small"
-            android:inputType="text" />
-
-        <TextView
-            android:id="@+id/lastnameTextView"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_below="@id/firstnameEditText"
-            android:layout_marginTop="8dp"
-            android:text="@string/hint_last_name"
-            android:textAppearance="@style/TextAppearance.AppCompat.Small"
-            android:textColor="@color/colorPrimaryLight"
-            android:textAllCaps="true" />
-
-        <EditText
-            android:enabled="false"
-            android:id="@+id/lastnameEditText"
-            android:layout_below="@id/lastnameTextView"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:textAppearance="@style/TextAppearance.AppCompat.Small"
-            android:inputType="text" />
-
-    </RelativeLayout>
-
-    <RelativeLayout
-        android:id="@+id/EmailAddress"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content">
-
-        <TextView
-            android:id="@+id/emailAddressTextView"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginBottom="@dimen/activity_vertical_margin"
-            android:layout_marginTop="@dimen/activity_vertical_margin"
-            android:text="@string/textview_email_address"
-            android:textColor="?attr/colorPrimaryDark"
-            android:textStyle="normal|bold"
-            android:textSize="24sp" />
-
-        <EditText
-            android:enabled="false"
-            android:id="@+id/emailEditText"
-            android:layout_below="@id/emailAddressTextView"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:textAppearance="@style/TextAppearance.AppCompat.Small"
-            android:inputType="textEmailAddress" />
-
-
-    </RelativeLayout>
-
-    <RelativeLayout
-        android:id="@+id/addressBook"
+    <LinearLayout
+        android:id="@+id/profile_page"
+        android:orientation="vertical"
         android:layout_width="wrap_content"
-        android:layout_height="match_parent">
+        android:layout_height="wrap_content">
 
-        <TextView
-            android:id="@+id/addressBookTextView"
+        <RelativeLayout
+            android:id="@+id/personalDetails"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginBottom="@dimen/activity_vertical_margin"
-            android:layout_marginTop="@dimen/activity_vertical_margin"
-            android:text="@string/textview_address"
-            android:textColor="?attr/colorPrimaryDark"
-            android:textSize="24sp"
-            android:textStyle="normal|bold" />
+            android:layout_height="wrap_content">
 
-        <TextView
-            android:id="@+id/addressLineTextView"
+            <TextView
+                android:id="@+id/personalDetailsTextView"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="@dimen/activity_vertical_margin"
+                android:text="@string/textview_personal_details"
+                android:textColor="@color/colorPrimaryDark"
+                android:textSize="24sp"
+                android:textStyle="normal|bold" />
+
+            <TextView
+                android:id="@+id/firstnameTextView"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/personalDetailsTextView"
+                android:layout_marginTop="8dp"
+                android:text="@string/hint_first_name"
+                android:textAllCaps="true"
+                android:textAppearance="@style/TextAppearance.AppCompat.Small"
+                android:textColor="@color/colorPrimaryLight" />
+
+            <EditText
+                android:id="@+id/firstnameEditText"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/firstnameTextView"
+                android:enabled="false"
+                android:inputType="text"
+                android:textAppearance="@style/TextAppearance.AppCompat.Small" />
+
+            <TextView
+                android:id="@+id/lastnameTextView"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/firstnameEditText"
+                android:layout_marginTop="8dp"
+                android:text="@string/hint_last_name"
+                android:textAllCaps="true"
+                android:textAppearance="@style/TextAppearance.AppCompat.Small"
+                android:textColor="@color/colorPrimaryLight" />
+
+            <EditText
+                android:id="@+id/lastnameEditText"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/lastnameTextView"
+                android:enabled="false"
+                android:inputType="text"
+                android:textAppearance="@style/TextAppearance.AppCompat.Small" />
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/EmailAddress"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_below="@id/addressBookTextView"
-            android:layout_marginTop="8dp"
-            android:text="@string/hint_address_line"
-            android:textAppearance="@style/TextAppearance.AppCompat.Small"
-            android:textColor="@color/colorPrimaryLight"
-            android:textAllCaps="true" />
+            android:layout_height="wrap_content">
 
-        <EditText
-            android:enabled="false"
-            android:id="@+id/addressLineEditText"
-            android:layout_below="@id/addressLineTextView"
+            <TextView
+                android:id="@+id/emailAddressTextView"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="@dimen/activity_vertical_margin"
+                android:layout_marginTop="@dimen/activity_vertical_margin"
+                android:text="@string/textview_email_address"
+                android:textColor="?attr/colorPrimaryDark"
+                android:textSize="24sp"
+                android:textStyle="normal|bold" />
+
+            <EditText
+                android:id="@+id/emailEditText"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/emailAddressTextView"
+                android:enabled="false"
+                android:inputType="textEmailAddress"
+                android:textAppearance="@style/TextAppearance.AppCompat.Small" />
+
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/addressBook"
             android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:textAppearance="@style/TextAppearance.AppCompat.Small"
-            android:inputType="text" />
+            android:layout_height="match_parent">
 
-        <TextView
-            android:id="@+id/cityTextView"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_below="@id/addressLineEditText"
-            android:layout_marginTop="8dp"
-            android:text="@string/hint_city"
-            android:textAppearance="@style/TextAppearance.AppCompat.Small"
-            android:textColor="@color/colorPrimaryLight"
-            android:textAllCaps="true" />
+            <TextView
+                android:id="@+id/addressBookTextView"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="@dimen/activity_vertical_margin"
+                android:layout_marginTop="@dimen/activity_vertical_margin"
+                android:text="@string/textview_address"
+                android:textColor="?attr/colorPrimaryDark"
+                android:textSize="24sp"
+                android:textStyle="normal|bold" />
 
-        <EditText
-            android:enabled="false"
-            android:id="@+id/cityEditText"
-            android:layout_below="@id/cityTextView"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:textAppearance="@style/TextAppearance.AppCompat.Small"
-            android:inputType="text" />
+            <TextView
+                android:id="@+id/addressLineTextView"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/addressBookTextView"
+                android:layout_marginTop="8dp"
+                android:text="@string/hint_address_line"
+                android:textAllCaps="true"
+                android:textAppearance="@style/TextAppearance.AppCompat.Small"
+                android:textColor="@color/colorPrimaryLight" />
 
-        <TextView
-            android:id="@+id/postcodeTextView"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_below="@id/cityEditText"
-            android:layout_marginTop="8dp"
-            android:text="@string/hint_city"
-            android:textAppearance="@style/TextAppearance.AppCompat.Small"
-            android:textColor="@color/colorPrimaryLight"
-            android:textAllCaps="true" />
+            <EditText
+                android:id="@+id/addressLineEditText"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/addressLineTextView"
+                android:enabled="false"
+                android:inputType="text"
+                android:textAppearance="@style/TextAppearance.AppCompat.Small" />
 
-        <EditText
-            android:enabled="false"
-            android:id="@+id/postcodeEditText"
-            android:layout_below="@id/postcodeTextView"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:textAppearance="@style/TextAppearance.AppCompat.Small"
-            android:inputType="text" />
+            <TextView
+                android:id="@+id/cityTextView"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/addressLineEditText"
+                android:layout_marginTop="8dp"
+                android:text="@string/hint_city"
+                android:textAllCaps="true"
+                android:textAppearance="@style/TextAppearance.AppCompat.Small"
+                android:textColor="@color/colorPrimaryLight" />
 
-        <TextView
-            android:id="@+id/phoneTextView"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_below="@id/postcodeEditText"
-            android:layout_marginTop="8dp"
-            android:text="@string/hint_phone"
-            android:textAppearance="@style/TextAppearance.AppCompat.Small"
-            android:textColor="@color/colorPrimaryLight"
-            android:textAllCaps="true" />
+            <EditText
+                android:id="@+id/cityEditText"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/cityTextView"
+                android:enabled="false"
+                android:inputType="text"
+                android:textAppearance="@style/TextAppearance.AppCompat.Small" />
 
-        <EditText
-            android:enabled="false"
-            android:id="@+id/phoneEditText"
-            android:layout_below="@id/phoneTextView"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:textAppearance="@style/TextAppearance.AppCompat.Small"
-            android:inputType="phone" />
+            <TextView
+                android:id="@+id/postcodeTextView"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/cityEditText"
+                android:layout_marginTop="8dp"
+                android:text="@string/hint_postcode"
+                android:textAllCaps="true"
+                android:textAppearance="@style/TextAppearance.AppCompat.Small"
+                android:textColor="@color/colorPrimaryLight" />
 
+            <EditText
+                android:id="@+id/postcodeEditText"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/postcodeTextView"
+                android:enabled="false"
+                android:inputType="text"
+                android:textAppearance="@style/TextAppearance.AppCompat.Small" />
 
-    </RelativeLayout>
-</LinearLayout>
+            <TextView
+                android:id="@+id/phoneTextView"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/postcodeEditText"
+                android:layout_marginTop="8dp"
+                android:text="@string/hint_phone"
+                android:textAllCaps="true"
+                android:textAppearance="@style/TextAppearance.AppCompat.Small"
+                android:textColor="@color/colorPrimaryLight" />
+
+            <EditText
+                android:id="@+id/phoneEditText"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/phoneTextView"
+                android:enabled="false"
+                android:inputType="phone"
+                android:textAppearance="@style/TextAppearance.AppCompat.Small" />
+
+        </RelativeLayout>
+
+    </LinearLayout>
+
+</android.support.design.widget.CoordinatorLayout>

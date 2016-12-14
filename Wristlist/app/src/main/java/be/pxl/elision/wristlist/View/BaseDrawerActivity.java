@@ -10,6 +10,7 @@ import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.view.MenuItem;
 import android.widget.FrameLayout;
+import android.widget.TextView;
 import be.pxl.elision.wristlist.R;
 import be.pxl.elision.wristlist.View.Dashboard.DashboardActivity;
 import be.pxl.elision.wristlist.View.Profile.ProfileActivity;
@@ -59,7 +60,6 @@ public abstract class BaseDrawerActivity extends AppCompatActivity
 
     @Override
     public void onBackPressed() {
-        drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
         if (drawer.isDrawerOpen(GravityCompat.START)) {
             drawer.closeDrawer(GravityCompat.START);
         } else {

@@ -1,6 +1,10 @@
 package be.pxl.elision.wristlist.View.Profile;
 
 import android.os.Bundle;
+import android.support.design.widget.CoordinatorLayout;
+import android.support.design.widget.FloatingActionButton;
+import android.support.design.widget.Snackbar;
+import android.view.View;
 import android.widget.EditText;
 import android.widget.FrameLayout;
 import android.widget.ImageView;
@@ -12,12 +16,22 @@ import be.pxl.elision.wristlist.R;
 import be.pxl.elision.wristlist.View.BaseDrawerActivity;
 
 public class ProfileActivity extends BaseDrawerActivity {
+    private boolean isInEditingMode = false;
+    private EditText firstNameEditText;
+    private EditText lastNameEditText;
+    private EditText emailEditText;
+    private EditText addressEditText;
+    private EditText cityEditText;
+    private EditText postcodeEditText;
+    private EditText phoneEditText;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setAppBar(R.layout.app_bar_profile);
         getLayoutInflater().inflate(R.layout.activity_profile, (FrameLayout) findViewById(R.id.profileFrame));
+
+        final CoordinatorLayout coordinatorLayout = (CoordinatorLayout) findViewById(R.id.appbar_profile);
 
         // Set profile image
         ImageView profileImage = (ImageView) findViewById(R.id.image);
@@ -26,6 +40,38 @@ public class ProfileActivity extends BaseDrawerActivity {
         profileImage.setImageResource(R.drawable.ic_person_white_48dp);
 
         setToolbarTitle(getResources().getString(R.string.profile));
+
+        // FAB actions
+        final FloatingActionButton actionButton = (FloatingActionButton) findViewById(R.id.fabAction);
+        actionButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                if (!isInEditingMode) {
+                    isInEditingMode = true;
+                    enableEditText(true);
+                    Snackbar snackbar = Snackbar
+                            .make(coordinatorLayout,
+                                    getResources().getText(R.string.snackbar_profile_editing),
+                                    Snackbar.LENGTH_LONG);
+                    snackbar.show();
+                    actionButton.setImageResource(R.drawable.ic_done_white_24dp);
+                } else {
+                    isInEditingMode = false;
+                    enableEditText(false);
+                    Snackbar snackbar = Snackbar
+                            .make(coordinatorLayout,
+                                    getResources().getText(R.string.snackbar_profile_saved),
+                                    Snackbar.LENGTH_LONG)
+                            .setAction(getResources().getText(R.string.button_undo), new View.OnClickListener() {
+                                @Override
+                                public void onClick(View view) {
+                                }
+                            });
+                    snackbar.show();
+                    actionButton.setImageResource(R.drawable.ic_mode_edit_white_24dp);
+                }
+            }
+        });
 
         //Dummy Data
         User dummyUser = new User();
@@ -45,19 +91,19 @@ public class ProfileActivity extends BaseDrawerActivity {
         dummyAddress.setPostalCode("3560");
         dummyUser.setDefaultAddress(dummyAddress);
         //set dummy gui
-        EditText firstNameEditText = (EditText) findViewById(R.id.firstnameEditText);
+        firstNameEditText = (EditText) findViewById(R.id.firstnameEditText);
         firstNameEditText.setText(dummyUser.getFirstName());
-        EditText lastNameEditText = (EditText) findViewById(R.id.lastnameEditText);
+        lastNameEditText = (EditText) findViewById(R.id.lastnameEditText);
         lastNameEditText.setText(dummyUser.getLastName());
-        EditText emailEditText = (EditText) findViewById(R.id.emailEditText);
+        emailEditText = (EditText) findViewById(R.id.emailEditText);
         emailEditText.setText(dummyUser.getDefaultAddress().getEmail());
-        EditText addressEditText = (EditText) findViewById(R.id.addressLineEditText);
+        addressEditText = (EditText) findViewById(R.id.addressLineEditText);
         addressEditText.setText(dummyAddress.getFormattedAddress());
-        EditText cityEditText = (EditText) findViewById(R.id.cityEditText);
+        cityEditText = (EditText) findViewById(R.id.cityEditText);
         cityEditText.setText(dummyAddress.getTown());
-        EditText poscodeEditText = (EditText) findViewById(R.id.postcodeEditText);
-        poscodeEditText.setText(dummyAddress.getPostalCode());
-        EditText phoneEditText = (EditText) findViewById(R.id.phoneEditText);
+        postcodeEditText = (EditText) findViewById(R.id.postcodeEditText);
+        postcodeEditText.setText(dummyAddress.getPostalCode());
+        phoneEditText = (EditText) findViewById(R.id.phoneEditText);
         phoneEditText.setText(dummyUser.getDefaultAddress().getPhone());
     }
 
@@ -66,5 +112,19 @@ public class ProfileActivity extends BaseDrawerActivity {
         super.onResume();
         // to check current activity in the navigation drawer
         setSelectedNavigationItem(1);
+    }
+
+    /**
+     *
+     * @param enable
+     */
+    private void enableEditText(boolean enable) {
+        firstNameEditText.setEnabled(enable);
+        lastNameEditText.setEnabled(enable);
+        emailEditText.setEnabled(enable);
+        addressEditText.setEnabled(enable);
+        cityEditText.setEnabled(enable);
+        postcodeEditText.setEnabled(enable);
+        phoneEditText.setEnabled(enable);
     }
 }
