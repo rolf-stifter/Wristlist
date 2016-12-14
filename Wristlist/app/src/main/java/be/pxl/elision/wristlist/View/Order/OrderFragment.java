@@ -21,8 +21,9 @@ import be.pxl.elision.wristlist.Model.Orders.DummyProduct;
 import be.pxl.elision.wristlist.R;
 import be.pxl.elision.wristlist.View.Orders.OrdersActivity;
 
+
 /**
- * Created by 11400081 on 14/12/2016.
+ * @Author by Stephane Oris
  */
 public class OrderFragment extends Fragment {
     private RecyclerView mRecyclerView;
@@ -30,6 +31,13 @@ public class OrderFragment extends Fragment {
     private RecyclerView.LayoutManager mLayoutManager;
     private TextView title;
 
+    /**
+     *
+     * @param inflater
+     * @param container
+     * @param savedInstanceState
+     * @return
+     */
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
 
 
@@ -87,7 +95,11 @@ public class OrderFragment extends Fragment {
         return card;
     }
 
-
+    /**
+     * Set Adapter with products and set card title with name
+     * @param products
+     * @param name
+     */
     public void NewData(List<DummyProduct> products, String name ) {
         mAdapter = new ProductRecyclerViewAdapter(products);
         mRecyclerView.setAdapter(mAdapter);

@@ -17,7 +17,7 @@ import be.pxl.elision.wristlist.R;
 import be.pxl.elision.wristlist.View.Order.OrderActivity;
 
 /**
- * Created by 11400081 on 9/12/2016.
+ * @Author by Stephane Oris
  */
 
 public class OrderCardsAdapter extends RecyclerView.Adapter<OrderCardsAdapter.CardViewHolder> {
@@ -35,6 +35,9 @@ public class OrderCardsAdapter extends RecyclerView.Adapter<OrderCardsAdapter.Ca
         ListView productsListview;
         LinearLayout cardHeaderLinearLayout;
 
+        /**
+         * @param v
+         */
         public CardViewHolder(View v) {
             super(v);
             //Card header
@@ -61,7 +64,10 @@ public class OrderCardsAdapter extends RecyclerView.Adapter<OrderCardsAdapter.Ca
         }
     }
 
-    // Provide a suitable constructor (depends on the kind of dataset)
+    /**
+     * Provide a suitable constructor (depends on the kind of dataset)
+     * @param myDataset
+     */
     public OrderCardsAdapter(DummyOrder[] myDataset) {
         mDataset = myDataset;
     }
@@ -73,7 +79,11 @@ public class OrderCardsAdapter extends RecyclerView.Adapter<OrderCardsAdapter.Ca
         return new OrderCardsAdapter.CardViewHolder(itemView);
     }
 
-    // Replace the contents of a view (invoked by the layout manager)
+    /**
+     * Replace the contents of a view (invoked by the layout manager)
+     * @param holder
+     * @param position
+     */
     @Override
     public void onBindViewHolder(OrderCardsAdapter.CardViewHolder holder, final int position) {
         // - get element from your dataset at this position
@@ -128,7 +138,10 @@ public class OrderCardsAdapter extends RecyclerView.Adapter<OrderCardsAdapter.Ca
 
     }
 
-    // Return the size of your dataset (invoked by the layout manager)
+    /**
+     * Return the size of your dataset (invoked by the layout manager)
+     * @return
+     */
     @Override
     public int getItemCount() {
         return mDataset.length;

@@ -11,8 +11,9 @@ import be.pxl.elision.wristlist.Model.Orders.DummyOrder;
 import be.pxl.elision.wristlist.R;
 import be.pxl.elision.wristlist.View.Order.OrderActivity;
 
+
 /**
- * Created by 11400081 on 8/12/2016.
+ * @Author by Stephane Oris
  */
 public class OrdersAdapter extends RecyclerView.Adapter<OrdersAdapter.ViewHolder> {
     private DummyOrder[] mDataset;
@@ -24,6 +25,10 @@ public class OrdersAdapter extends RecyclerView.Adapter<OrdersAdapter.ViewHolder
         // each data item is just a string in this case
         TextView titleTextView, statusTextView, dateTextView;
 
+        /**
+         *
+         * @param v
+         */
         public ViewHolder(View v) {
             super(v);
             titleTextView = (TextView) v.findViewById(R.id.row_title);
@@ -32,11 +37,20 @@ public class OrdersAdapter extends RecyclerView.Adapter<OrdersAdapter.ViewHolder
         }
     }
 
-    // Provide a suitable constructor (depends on the kind of dataset)
+    /**
+     * Provide a suitable constructor (depends on the kind of dataset)
+     * @param myDataset
+     */
     public OrdersAdapter(DummyOrder[] myDataset) {
         mDataset = myDataset;
     }
 
+    /**
+     *
+     * @param parent
+     * @param viewType
+     * @return
+     */
     public ViewHolder onCreateViewHolder(ViewGroup parent, final int viewType) {
         final View itemView = LayoutInflater.from(parent.getContext())
                 .inflate(R.layout.orders_row, parent, false);
@@ -44,7 +58,11 @@ public class OrdersAdapter extends RecyclerView.Adapter<OrdersAdapter.ViewHolder
         return new ViewHolder(itemView);
     }
 
-    // Replace the contents of a view (invoked by the layout manager)
+    /**
+     * Replace the contents of a view (invoked by the layout manager)
+     * @param holder
+     * @param position
+     */
     @Override
     public void onBindViewHolder(ViewHolder holder, final int position) {
         // - get element from your dataset at this position
@@ -65,7 +83,10 @@ public class OrdersAdapter extends RecyclerView.Adapter<OrdersAdapter.ViewHolder
 
     }
 
-    // Return the size of your dataset (invoked by the layout manager)
+    /**
+     * Return the size of your dataset (invoked by the layout manager)
+     * @return
+     */
     @Override
     public int getItemCount() {
         return mDataset.length;
