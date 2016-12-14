@@ -1,9 +1,5 @@
 package be.pxl.elision.wristlist.Model.Profile;
 
-/**
- * Created by Timothy Vanderaerden on 8/12/16.
- */
-
 public class Region {
     private String isocode;
     private String isocodeShort;

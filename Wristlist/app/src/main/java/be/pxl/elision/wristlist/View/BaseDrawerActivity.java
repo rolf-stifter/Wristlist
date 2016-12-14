@@ -10,12 +10,13 @@ import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.view.MenuItem;
 import android.widget.FrameLayout;
+import android.widget.TextView;
 import be.pxl.elision.wristlist.R;
 import be.pxl.elision.wristlist.View.Dashboard.DashboardActivity;
 import be.pxl.elision.wristlist.View.Profile.ProfileActivity;
 
 /**
- * Created by Timothy Vanderaerden on 8/12/16.
+ * @author Timothy Vanderaerden
  */
 
 public abstract class BaseDrawerActivity extends AppCompatActivity
@@ -26,6 +27,9 @@ public abstract class BaseDrawerActivity extends AppCompatActivity
     private NavigationView navigationView;
     private Toolbar toolbar;
 
+    /**
+     * @param savedInstanceState
+     */
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -34,6 +38,10 @@ public abstract class BaseDrawerActivity extends AppCompatActivity
         appBarFrameLayout = (FrameLayout) findViewById(R.id.appBarFrame);
     }
 
+    /**
+     * Set the appbar layout
+     * @param layout
+     */
     protected void setAppBar(int layout){
         getLayoutInflater().inflate(layout, appBarFrameLayout);
 
@@ -49,17 +57,24 @@ public abstract class BaseDrawerActivity extends AppCompatActivity
         navigationView.setNavigationItemSelectedListener(this);
     }
 
+    /**
+     * Set the toolbar title
+     * @param title
+     */
     protected void setToolbarTitle(String title) {
         toolbar.setTitle(title);
     }
 
+    /**
+     * Highlight  menu item
+     * @param item
+     */
     protected void setSelectedNavigationItem(int item) {
         navigationView.getMenu().getItem(item).setChecked(true);
     }
 
     @Override
     public void onBackPressed() {
-        drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
         if (drawer.isDrawerOpen(GravityCompat.START)) {
             drawer.closeDrawer(GravityCompat.START);
         } else {
