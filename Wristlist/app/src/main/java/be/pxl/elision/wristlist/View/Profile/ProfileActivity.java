@@ -15,6 +15,9 @@ import be.pxl.elision.wristlist.Model.Profile.User;
 import be.pxl.elision.wristlist.R;
 import be.pxl.elision.wristlist.View.BaseDrawerActivity;
 
+/**
+ * @author Timothy Vanderaerden
+ */
 public class ProfileActivity extends BaseDrawerActivity {
     private boolean isInEditingMode = false;
     private EditText firstNameEditText;
@@ -25,6 +28,9 @@ public class ProfileActivity extends BaseDrawerActivity {
     private EditText postcodeEditText;
     private EditText phoneEditText;
 
+    /**
+     * @param savedInstanceState
+     */
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -115,7 +121,7 @@ public class ProfileActivity extends BaseDrawerActivity {
     }
 
     /**
-     *
+     * Enable or disable all 'EditText' widgets
      * @param enable
      */
     private void enableEditText(boolean enable) {
