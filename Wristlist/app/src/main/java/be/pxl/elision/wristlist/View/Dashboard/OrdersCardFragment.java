@@ -16,11 +16,11 @@ import java.util.List;
 
 import be.pxl.elision.wristlist.Model.Orders.DummyOrder;
 import be.pxl.elision.wristlist.R;
-import be.pxl.elision.wristlist.View.Profile.ProfileActivity;
+import be.pxl.elision.wristlist.View.Orders.OrdersActivity;
 import be.pxl.elision.wristlist.View.Utility.OrdersAdapter;
 
 /**
- * Created by 11400081 on 8/12/2016.
+ * @Author by Stephane Oris
  */
 
 public class OrdersCardFragment extends Fragment{
@@ -30,13 +30,20 @@ public class OrdersCardFragment extends Fragment{
     private RecyclerView.LayoutManager mLayoutManager;
     private List<DummyOrder> ordersList;
 
+    /**
+     *
+     * @param inflater
+     * @param container
+     * @param savedInstanceState
+     * @return
+     */
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
 
 
         //Card
         View card = getActivity().getLayoutInflater().inflate(R.layout.card_view, null);
         TextView title = (TextView) card.findViewById(R.id.card_title);
-        title.setText("Bestellingen");
+        title.setText("Orders");
         ImageView icon = (ImageView) card.findViewById(R.id.card_icon);
         icon.setImageResource(R.drawable.ic_shopping_cart_white);
 
@@ -49,8 +56,7 @@ public class OrdersCardFragment extends Fragment{
         header.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                // TODO: 9/12/2016  
-                Intent profile = new Intent(getActivity(), ProfileActivity.class);
+                Intent profile = new Intent(getActivity(), OrdersActivity.class);
                 startActivity(profile);
             }
         });
