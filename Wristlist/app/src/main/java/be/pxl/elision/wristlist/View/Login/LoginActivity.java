@@ -13,8 +13,17 @@ import android.widget.TextView;
 import be.pxl.elision.wristlist.R;
 import be.pxl.elision.wristlist.View.Dashboard.DashboardActivity;
 
+
+/**
+ * @Author by Stephane Oris
+ */
+
 public class LoginActivity extends AppCompatActivity {
 
+    /**
+     *
+     * @param savedInstanceState
+     */
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);

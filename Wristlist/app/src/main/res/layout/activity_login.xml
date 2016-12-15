@@ -44,35 +44,10 @@
         android:textColorHint = "#c5c5c5"/>
 
 
-
-    <Button
-        android:text="Login"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginBottom="30dp"
-        android:id="@+id/login"
-        android:layout_alignParentBottom="true"
-        android:layout_centerHorizontal="true" />
-
     <ImageView
         android:layout_width="match_parent"
         android:src="@drawable/logo"
-        android:layout_alignParentTop="true"
-        android:layout_height="330dp"
-        android:layout_above="@+id/textview_error_login"
-        android:layout_alignParentEnd="true" />
-
-    <TextView
-        android:text="registreren"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:id="@+id/register"
-        android:textStyle="normal|italic"
-        android:fontFamily="sans-serif"
-        android:textColor="@color/colorPrimaryDark"
-        android:layout_alignParentBottom="true"
-        android:layout_alignParentStart="true"
-        android:layout_marginBottom="18dp" />
+        android:layout_height="330dp" />
 
     <TextView
         android:textAlignment="center"
@@ -84,5 +59,35 @@
         android:id="@+id/textview_error_login"
         android:layout_alignEnd="@+id/editText_username"
         android:layout_above="@+id/editText_username" />
+
+    <TextView
+        android:text="registreren"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/register"
+        android:textStyle="normal|italic"
+        android:fontFamily="sans-serif"
+        android:textColor="@color/colorPrimaryDark"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentStart="true" />
+
+    <CheckBox
+        android:text="@string/checkbox_login"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/checkBox"
+        android:layout_above="@+id/register"
+        android:layout_alignStart="@+id/editText_password"
+        android:layout_marginBottom="12dp"
+        android:textColor="?attr/colorButtonNormal" />
+
+    <Button
+        android:text="Login"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/login"
+        android:layout_alignBaseline="@+id/checkBox"
+        android:layout_alignBottom="@+id/checkBox"
+        android:layout_alignEnd="@+id/editText_password" />
 
 </RelativeLayout>

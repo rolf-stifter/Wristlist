@@ -20,7 +20,7 @@ import be.pxl.elision.wristlist.View.Orders.OrdersActivity;
 import be.pxl.elision.wristlist.View.Utility.OrdersAdapter;
 
 /**
- * Created by 11400081 on 8/12/2016.
+ * @Author by Stephane Oris
  */
 
 public class OrdersCardFragment extends Fragment{
@@ -30,6 +30,13 @@ public class OrdersCardFragment extends Fragment{
     private RecyclerView.LayoutManager mLayoutManager;
     private List<DummyOrder> ordersList;
 
+    /**
+     *
+     * @param inflater
+     * @param container
+     * @param savedInstanceState
+     * @return
+     */
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
 
 

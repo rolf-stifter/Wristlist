@@ -6,9 +6,10 @@
 
     <string name="action_settings">Settings</string>
 
+    <!-- Drawer -->
     <string name="orders">Orders</string>
     <string name="profile">Account</string>
-    <string name="sign_off">Log out</string>
+    <string name="sign_off">Sign out</string>
     <string name="username">Stephane Oris</string>
     <string name="dashboard">Dashboard</string>
 
@@ -20,5 +21,14 @@
     <string name="hint_address_line">Address Line</string>
     <string name="hint_last_name">Last name</string>
     <string name="hint_city">City</string>
+    <string name="hint_postcode">Post code</string>
     <string name="hint_phone">Phone</string>
+
+    <!-- SnackBars -->
+    <string name="snackbar_profile_editing">You can start editing</string>
+    <string name="snackbar_profile_saved">Your profile has been saved</string>
+
+    <!-- Buttons -->
+    <string name="button_undo">Undo</string>
+    <string name="checkbox_login">Keep me logged in</string>
 </resources>

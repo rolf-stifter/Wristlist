@@ -6,8 +6,14 @@ import android.widget.FrameLayout;
 import be.pxl.elision.wristlist.R;
 import be.pxl.elision.wristlist.View.BaseDrawerActivity;
 
+/**
+ * @author Timothy Vander
+ */
 public class DashboardActivity extends BaseDrawerActivity {
 
+    /**
+     * @param savedInstanceState
+     */
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);

@@ -12,7 +12,7 @@ import be.pxl.elision.wristlist.Model.Orders.DummyProduct;
 import be.pxl.elision.wristlist.R;
 
 /**
- * Created by 11400081 on 14/12/2016.
+ * @Author by Stephane Oris
  */
 public class ProductRecyclerViewAdapter extends RecyclerView.Adapter<ProductRecyclerViewAdapter.ViewHolder> {
     private List<DummyProduct> mDataset;
@@ -24,6 +24,10 @@ public class ProductRecyclerViewAdapter extends RecyclerView.Adapter<ProductRecy
         // each data item is just a string in this case
         TextView productNameTextView, productPriceTextView;
 
+        /**
+         *
+         * @param v
+         */
         public ViewHolder(View v) {
             super(v);
             productNameTextView = (TextView) v.findViewById(R.id.row_name);
@@ -31,11 +35,20 @@ public class ProductRecyclerViewAdapter extends RecyclerView.Adapter<ProductRecy
         }
     }
 
-    // Provide a suitable constructor (depends on the kind of dataset)
+    /**
+     * Provide a suitable constructor (depends on the kind of dataset)
+     * @param myDataset
+     */
     public ProductRecyclerViewAdapter(List<DummyProduct> myDataset) {
         mDataset = myDataset;
     }
 
+    /**
+     *
+     * @param parent
+     * @param viewType
+     * @return
+     */
     public ProductRecyclerViewAdapter.ViewHolder onCreateViewHolder(ViewGroup parent, final int viewType) {
         final View itemView = LayoutInflater.from(parent.getContext())
                 .inflate(R.layout.product_row, parent, false);
@@ -43,7 +56,11 @@ public class ProductRecyclerViewAdapter extends RecyclerView.Adapter<ProductRecy
         return new ProductRecyclerViewAdapter.ViewHolder(itemView);
     }
 
-    // Replace the contents of a view (invoked by the layout manager)
+    /**
+     * Replace the contents of a view (invoked by the layout manager)
+     * @param holder
+     * @param position
+     */
     @Override
     public void onBindViewHolder(ProductRecyclerViewAdapter.ViewHolder holder, int position) {
         // - get element from your dataset at this position
@@ -54,7 +71,10 @@ public class ProductRecyclerViewAdapter extends RecyclerView.Adapter<ProductRecy
 
     }
 
-    // Return the size of your dataset (invoked by the layout manager)
+    /**
+     * Return the size of your dataset (invoked by the layout manager)
+     * @return
+     */
     @Override
     public int getItemCount() {
         return mDataset.size();

@@ -14,7 +14,7 @@ import be.pxl.elision.wristlist.Model.Orders.DummyProduct;
 import be.pxl.elision.wristlist.R;
 
 /**
- * Created by 11400081 on 10/12/2016.
+ * @Author by Stephane Oris
  */
 public class ProductAdapter extends ArrayAdapter<DummyProduct> {
 
@@ -22,13 +22,25 @@ public class ProductAdapter extends ArrayAdapter<DummyProduct> {
     private final List<DummyProduct> products;
     private final Activity context;
 
-    public ProductAdapter(ListView ll, List<DummyProduct> products) {
-        super(ll.getContext(), R.layout.product_row, products);
+    /**
+     *
+     * @param listView
+     * @param products
+     */
+    public ProductAdapter(ListView listView, List<DummyProduct> products) {
+        super(listView.getContext(), R.layout.product_row, products);
 
-        this.context = (Activity) ll.getContext();
+        this.context = (Activity) listView.getContext();
         this.products = products;
     }
 
+    /**
+     *
+     * @param position
+     * @param view
+     * @param parent
+     * @return
+     */
     @Override
     public View getView(int position, View view, ViewGroup parent) {
         LayoutInflater inflater = context.getLayoutInflater();
