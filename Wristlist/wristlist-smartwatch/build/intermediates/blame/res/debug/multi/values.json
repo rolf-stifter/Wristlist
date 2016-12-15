@@ -2909,46 +2909,8 @@
                     "startLine": 251,
                     "startColumn": 4,
                     "startOffset": 20168,
-                    "endColumn": 58,
-                    "endOffset": 20222
-                },
-                "from": {
-                    "file": "/home/timothy/Android/Wristlist/Wristlist/wristlist-smartwatch/src/main/res/values/strings.xml",
-                    "position": {
-                        "startLine": 2,
-                        "startColumn": 4,
-                        "startOffset": 63,
-                        "endColumn": 58,
-                        "endOffset": 117
-                    }
-                }
-            },
-            {
-                "to": {
-                    "startLine": 252,
-                    "startColumn": 4,
-                    "startOffset": 20227,
-                    "endColumn": 60,
-                    "endOffset": 20283
-                },
-                "from": {
-                    "file": "/home/timothy/Android/Wristlist/Wristlist/wristlist-smartwatch/src/main/res/values/strings.xml",
-                    "position": {
-                        "startLine": 3,
-                        "startColumn": 4,
-                        "startOffset": 122,
-                        "endColumn": 60,
-                        "endOffset": 178
-                    }
-                }
-            },
-            {
-                "to": {
-                    "startLine": 253,
-                    "startColumn": 4,
-                    "startOffset": 20288,
                     "endColumn": 83,
-                    "endOffset": 20367
+                    "endOffset": 20247
                 },
                 "from": {
                     "file": "/home/timothy/Android/Wristlist/Wristlist/wristlist-smartwatch/build/intermediates/exploded-aar/com.google.android.support/wearable/2.0.0-beta1/res/values/values.xml",
@@ -2963,11 +2925,49 @@
             },
             {
                 "to": {
+                    "startLine": 252,
+                    "startColumn": 4,
+                    "startOffset": 20252,
+                    "endColumn": 41,
+                    "endOffset": 20289
+                },
+                "from": {
+                    "file": "/home/timothy/Android/Wristlist/Wristlist/wristlist-smartwatch/src/main/res/values/strings.xml",
+                    "position": {
+                        "startLine": 3,
+                        "startColumn": 4,
+                        "startOffset": 64,
+                        "endColumn": 41,
+                        "endOffset": 101
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 253,
+                    "startColumn": 4,
+                    "startOffset": 20294,
+                    "endColumn": 43,
+                    "endOffset": 20333
+                },
+                "from": {
+                    "file": "/home/timothy/Android/Wristlist/Wristlist/wristlist-smartwatch/src/main/res/values/strings.xml",
+                    "position": {
+                        "startLine": 4,
+                        "startColumn": 4,
+                        "startOffset": 106,
+                        "endColumn": 43,
+                        "endOffset": 145
+                    }
+                }
+            },
+            {
+                "to": {
                     "startLine": 254,
                     "startColumn": 4,
-                    "startOffset": 20372,
+                    "startOffset": 20338,
                     "endColumn": 51,
-                    "endOffset": 20419
+                    "endOffset": 20385
                 },
                 "from": {
                     "file": "/home/timothy/Android/Wristlist/Wristlist/wristlist-smartwatch/build/intermediates/exploded-aar/com.google.android.support/wearable/2.0.0-beta1/res/values/values.xml",
@@ -2984,9 +2984,9 @@
                 "to": {
                     "startLine": 255,
                     "startColumn": 4,
-                    "startOffset": 20424,
+                    "startOffset": 20390,
                     "endColumn": 164,
-                    "endOffset": 20584
+                    "endOffset": 20550
                 },
                 "from": {
                     "file": "/home/timothy/Android/Wristlist/Wristlist/wristlist-smartwatch/build/intermediates/exploded-aar/com.google.android.support/wearable/2.0.0-beta1/res/values/values.xml",
@@ -3003,9 +3003,9 @@
                 "to": {
                     "startLine": 256,
                     "startColumn": 4,
-                    "startOffset": 20589,
+                    "startOffset": 20555,
                     "endColumn": 171,
-                    "endOffset": 20756
+                    "endOffset": 20722
                 },
                 "from": {
                     "file": "/home/timothy/Android/Wristlist/Wristlist/wristlist-smartwatch/build/intermediates/exploded-aar/com.google.android.support/wearable/2.0.0-beta1/res/values/values.xml",
@@ -3022,10 +3022,10 @@
                 "to": {
                     "startLine": 257,
                     "startColumn": 4,
-                    "startOffset": 20761,
+                    "startOffset": 20727,
                     "endLine": 261,
                     "endColumn": 8,
-                    "endOffset": 21033
+                    "endOffset": 20999
                 },
                 "from": {
                     "file": "/home/timothy/Android/Wristlist/Wristlist/wristlist-smartwatch/build/intermediates/exploded-aar/com.google.android.support/wearable/2.0.0-beta1/res/values/values.xml",

@@ -8,6 +8,10 @@
         "source": "/home/timothy/Android/Wristlist/Wristlist/wristlist-smartwatch/build/intermediates/exploded-aar/com.google.android.gms/play-services-base/10.0.1/res/drawable/common_google_signin_btn_text_light.xml"
     },
     {
+        "merged": "/home/timothy/Android/Wristlist/Wristlist/wristlist-smartwatch/build/intermediates/res/merged/debug/drawable/ic_person.png",
+        "source": "/home/timothy/Android/Wristlist/Wristlist/wristlist-smartwatch/src/main/res/drawable/ic_person.png"
+    },
+    {
         "merged": "/home/timothy/Android/Wristlist/Wristlist/wristlist-smartwatch/build/intermediates/res/merged/debug/drawable/common_google_signin_btn_icon_light.xml",
         "source": "/home/timothy/Android/Wristlist/Wristlist/wristlist-smartwatch/build/intermediates/exploded-aar/com.google.android.gms/play-services-base/10.0.1/res/drawable/common_google_signin_btn_icon_light.xml"
     },
@@ -20,12 +24,12 @@
         "source": "/home/timothy/Android/Wristlist/Wristlist/wristlist-smartwatch/build/intermediates/exploded-aar/com.google.android.gms/play-services-base/10.0.1/res/drawable/common_google_signin_btn_text_light_focused.xml"
     },
     {
-        "merged": "/home/timothy/Android/Wristlist/Wristlist/wristlist-smartwatch/build/intermediates/res/merged/debug/drawable/card_background.xml",
-        "source": "/home/timothy/Android/Wristlist/Wristlist/wristlist-smartwatch/build/intermediates/exploded-aar/com.google.android.support/wearable/2.0.0-beta1/res/drawable/card_background.xml"
-    },
-    {
         "merged": "/home/timothy/Android/Wristlist/Wristlist/wristlist-smartwatch/build/intermediates/res/merged/debug/drawable/common_google_signin_btn_text_dark.xml",
         "source": "/home/timothy/Android/Wristlist/Wristlist/wristlist-smartwatch/build/intermediates/exploded-aar/com.google.android.gms/play-services-base/10.0.1/res/drawable/common_google_signin_btn_text_dark.xml"
+    },
+    {
+        "merged": "/home/timothy/Android/Wristlist/Wristlist/wristlist-smartwatch/build/intermediates/res/merged/debug/drawable/card_background.xml",
+        "source": "/home/timothy/Android/Wristlist/Wristlist/wristlist-smartwatch/build/intermediates/exploded-aar/com.google.android.support/wearable/2.0.0-beta1/res/drawable/card_background.xml"
     },
     {
         "merged": "/home/timothy/Android/Wristlist/Wristlist/wristlist-smartwatch/build/intermediates/res/merged/debug/drawable/common_google_signin_btn_icon_light_focused.xml",
@@ -38,5 +42,9 @@
     {
         "merged": "/home/timothy/Android/Wristlist/Wristlist/wristlist-smartwatch/build/intermediates/res/merged/debug/drawable/common_google_signin_btn_icon_dark.xml",
         "source": "/home/timothy/Android/Wristlist/Wristlist/wristlist-smartwatch/build/intermediates/exploded-aar/com.google.android.gms/play-services-base/10.0.1/res/drawable/common_google_signin_btn_icon_dark.xml"
+    },
+    {
+        "merged": "/home/timothy/Android/Wristlist/Wristlist/wristlist-smartwatch/build/intermediates/res/merged/debug/drawable/logo.png",
+        "source": "/home/timothy/Android/Wristlist/Wristlist/wristlist-smartwatch/src/main/res/drawable/logo.png"
     }
 ]

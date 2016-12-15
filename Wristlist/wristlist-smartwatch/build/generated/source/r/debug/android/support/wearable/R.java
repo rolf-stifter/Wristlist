@@ -209,9 +209,9 @@ public final class R {
 		public static final int ic_full_sad = 0x7f020023;
 		public static final int ic_more_horiz_24dp_wht = 0x7f020024;
 		public static final int ic_more_vert_24dp_wht = 0x7f020025;
-		public static final int open_on_phone = 0x7f020026;
-		public static final int open_on_phone_animation = 0x7f020027;
-		public static final int preference_wrapped_icon = 0x7f020028;
+		public static final int open_on_phone = 0x7f020028;
+		public static final int open_on_phone_animation = 0x7f020029;
+		public static final int preference_wrapped_icon = 0x7f02002a;
 	}
 	public static final class fraction {
 		public static final int action_drawer_item_first_item_top_padding = 0x7f0c0002;
@@ -222,9 +222,9 @@ public final class R {
 		public static final int confirmation_overlay_margin_side = 0x7f0c0001;
 	}
 	public static final class id {
-		public static final int alertTitle = 0x7f10002a;
+		public static final int alertTitle = 0x7f10002e;
 		public static final int all = 0x7f100003;
-		public static final int animatedWrapperContainer = 0x7f100029;
+		public static final int animatedWrapperContainer = 0x7f10002d;
 		public static final int bottom = 0x7f100004;
 		public static final int butt = 0x7f100008;
 		public static final int buttonPanel = 0x7f100021;
@@ -233,8 +233,8 @@ public final class R {
 		public static final int center_vertical = 0x7f100019;
 		public static final int clip_horizontal = 0x7f10001a;
 		public static final int clip_vertical = 0x7f10001b;
-		public static final int dismiss_overlay_button = 0x7f10002c;
-		public static final int dismiss_overlay_explain = 0x7f10002b;
+		public static final int dismiss_overlay_button = 0x7f100030;
+		public static final int dismiss_overlay_explain = 0x7f10002f;
 		public static final int end = 0x7f10001c;
 		public static final int fill = 0x7f10001d;
 		public static final int fill_horizontal = 0x7f10001e;
@@ -243,28 +243,28 @@ public final class R {
 		public static final int height = 0x7f10000b;
 		public static final int item_touch_helper_previous_elevation = 0x7f100000;
 		public static final int left = 0x7f100005;
-		public static final int nested_icon = 0x7f100036;
+		public static final int nested_icon = 0x7f10003a;
 		public static final int none = 0x7f10000c;
-		public static final int parentPanel = 0x7f100028;
+		public static final int parentPanel = 0x7f10002c;
 		public static final int right = 0x7f100006;
 		public static final int round = 0x7f100009;
 		public static final int spacer = 0x7f100022;
 		public static final int square = 0x7f10000a;
 		public static final int start = 0x7f100020;
-		public static final int text = 0x7f100032;
-		public static final int title = 0x7f100033;
+		public static final int text = 0x7f100037;
+		public static final int title = 0x7f100036;
 		public static final int top = 0x7f100007;
 		public static final int wearable_support_action_drawer_expand_icon = 0x7f100026;
 		public static final int wearable_support_action_drawer_item_icon = 0x7f100023;
 		public static final int wearable_support_action_drawer_item_text = 0x7f100024;
 		public static final int wearable_support_action_drawer_peek_action_icon = 0x7f100025;
-		public static final int wearable_support_confirmation_overlay_image = 0x7f100030;
-		public static final int wearable_support_confirmation_overlay_message = 0x7f100031;
-		public static final int wearable_support_drawer_view_peek_container = 0x7f100034;
-		public static final int wearable_support_drawer_view_peek_icon = 0x7f100035;
-		public static final int wearable_support_navigation_drawer_item_icon = 0x7f10002d;
-		public static final int wearable_support_navigation_drawer_item_text = 0x7f10002e;
-		public static final int wearable_support_navigation_drawer_page_indicator = 0x7f10002f;
+		public static final int wearable_support_confirmation_overlay_image = 0x7f100034;
+		public static final int wearable_support_confirmation_overlay_message = 0x7f100035;
+		public static final int wearable_support_drawer_view_peek_container = 0x7f100038;
+		public static final int wearable_support_drawer_view_peek_icon = 0x7f100039;
+		public static final int wearable_support_navigation_drawer_item_icon = 0x7f100031;
+		public static final int wearable_support_navigation_drawer_item_text = 0x7f100032;
+		public static final int wearable_support_navigation_drawer_page_indicator = 0x7f100033;
 		public static final int wearable_support_navigation_drawer_view_pager = 0x7f100001;
 		public static final int wearable_support_overlay_confirmation = 0x7f100002;
 		public static final int width = 0x7f10000d;
@@ -292,8 +292,8 @@ public final class R {
 		public static final int navigation_drawer_item_view = 0x7f040006;
 		public static final int navigation_drawer_view = 0x7f040007;
 		public static final int overlay_confirmation = 0x7f040008;
-		public static final int watch_card_content = 0x7f04000b;
-		public static final int wearable_drawer_view = 0x7f04000c;
+		public static final int watch_card_content = 0x7f040009;
+		public static final int wearable_drawer_view = 0x7f04000a;
 	}
 	public static final class plurals {
 		public static final int time_difference_short_days = 0x7f090000;

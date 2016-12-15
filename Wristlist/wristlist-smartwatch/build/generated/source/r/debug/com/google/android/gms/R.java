@@ -64,7 +64,7 @@ public final class R {
 		public static final int light = 0x7f100017;
 		public static final int none = 0x7f10000c;
 		public static final int standard = 0x7f100013;
-		public static final int text = 0x7f100032;
+		public static final int text = 0x7f100037;
 		public static final int wide = 0x7f100014;
 	}
 	public static final class integer {
