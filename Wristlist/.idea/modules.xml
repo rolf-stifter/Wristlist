@@ -5,6 +5,7 @@
       <module fileurl="file://$PROJECT_DIR$/Wristlist.iml" filepath="$PROJECT_DIR$/Wristlist.iml" />
       <module fileurl="file://$PROJECT_DIR$/app/app.iml" filepath="$PROJECT_DIR$/app/app.iml" />
       <module fileurl="file://$PROJECT_DIR$/wristlist-smartwatch/wristlist-smartwatch.iml" filepath="$PROJECT_DIR$/wristlist-smartwatch/wristlist-smartwatch.iml" />
+      <module fileurl="file://$PROJECT_DIR$/wristlist-smartwatch/wristlist-smartwatch.iml" filepath="$PROJECT_DIR$/wristlist-smartwatch/wristlist-smartwatch.iml" />
     </modules>
   </component>
 </project>
