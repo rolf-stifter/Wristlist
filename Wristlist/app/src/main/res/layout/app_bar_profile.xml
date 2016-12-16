@@ -2,6 +2,7 @@
 <android.support.design.widget.CoordinatorLayout
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:fitsSystemWindows="true"
@@ -63,7 +64,10 @@
         android:layout_margin="@dimen/fab_margin"
         android:src="@drawable/ic_mode_edit_white_24dp"
         app:fabSize="normal"
+        app:backgroundTint="@color/colorPrimary"
+        app:rippleColor="@color/colorPrimaryVariant"
         app:layout_anchor="@id/profileFrame"
-        app:layout_anchorGravity="bottom|end" />
+        app:layout_anchorGravity="bottom|end"
+        tools:targetApi="lollipop" />
 
 </android.support.design.widget.CoordinatorLayout>

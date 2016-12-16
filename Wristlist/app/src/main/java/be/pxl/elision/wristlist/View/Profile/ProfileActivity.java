@@ -4,6 +4,7 @@ import android.os.Bundle;
 import android.support.design.widget.CoordinatorLayout;
 import android.support.design.widget.FloatingActionButton;
 import android.support.design.widget.Snackbar;
+import android.support.v4.content.ContextCompat;
 import android.view.View;
 import android.widget.EditText;
 import android.widget.FrameLayout;
@@ -68,6 +69,7 @@ public class ProfileActivity extends BaseDrawerActivity {
                             .make(coordinatorLayout,
                                     getResources().getText(R.string.snackbar_profile_saved),
                                     Snackbar.LENGTH_LONG)
+                            .setActionTextColor(ContextCompat.getColor(v.getContext(), R.color.colorPrimaryDark))
                             .setAction(getResources().getText(R.string.button_undo), new View.OnClickListener() {
                                 @Override
                                 public void onClick(View view) {
