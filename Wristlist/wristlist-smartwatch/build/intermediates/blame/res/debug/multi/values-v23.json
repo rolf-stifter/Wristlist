@@ -1,6 +1,6 @@
 [
     {
-        "outputFile": "/home/timothy/Android/Wristlist/Wristlist/wristlist-smartwatch/build/intermediates/incremental/mergeDebugResources/merged.dir/values-v23/values-v23.xml",
+        "outputFile": "C:\\Users\\11400081\\Documents\\GitHub\\Wristlist\\Wristlist\\wristlist-smartwatch\\build\\intermediates\\incremental\\mergeDebugResources\\merged.dir\\values-v23\\values-v23.xml",
         "map": [
             {
                 "to": {
@@ -12,7 +12,7 @@
                     "endOffset": 216
                 },
                 "from": {
-                    "file": "/home/timothy/Android/Wristlist/Wristlist/wristlist-smartwatch/build/intermediates/exploded-aar/com.google.android.support/wearable/2.0.0-beta1/res/values-v23/values.xml",
+                    "file": "C:\\Users\\11400081\\Documents\\GitHub\\Wristlist\\Wristlist\\wristlist-smartwatch\\build\\intermediates\\exploded-aar\\com.google.android.support\\wearable\\2.0.0-beta1\\res\\values-v23\\values.xml",
                     "position": {
                         "startLine": 4,
                         "startColumn": 0,
@@ -33,7 +33,7 @@
                     "endOffset": 384
                 },
                 "from": {
-                    "file": "/home/timothy/Android/Wristlist/Wristlist/wristlist-smartwatch/build/intermediates/exploded-aar/com.google.android.support/wearable/2.0.0-beta1/res/values-v23/values.xml",
+                    "file": "C:\\Users\\11400081\\Documents\\GitHub\\Wristlist\\Wristlist\\wristlist-smartwatch\\build\\intermediates\\exploded-aar\\com.google.android.support\\wearable\\2.0.0-beta1\\res\\values-v23\\values.xml",
                     "position": {
                         "startLine": 8,
                         "startColumn": 0,
@@ -54,7 +54,7 @@
                     "endOffset": 789
                 },
                 "from": {
-                    "file": "/home/timothy/Android/Wristlist/Wristlist/wristlist-smartwatch/build/intermediates/exploded-aar/com.google.android.support/wearable/2.0.0-beta1/res/values-v23/values.xml",
+                    "file": "C:\\Users\\11400081\\Documents\\GitHub\\Wristlist\\Wristlist\\wristlist-smartwatch\\build\\intermediates\\exploded-aar\\com.google.android.support\\wearable\\2.0.0-beta1\\res\\values-v23\\values.xml",
                     "position": {
                         "startLine": 12,
                         "startColumn": 0,
@@ -75,7 +75,7 @@
                     "endOffset": 893
                 },
                 "from": {
-                    "file": "/home/timothy/Android/Wristlist/Wristlist/wristlist-smartwatch/build/intermediates/exploded-aar/com.google.android.support/wearable/2.0.0-beta1/res/values-v23/values.xml",
+                    "file": "C:\\Users\\11400081\\Documents\\GitHub\\Wristlist\\Wristlist\\wristlist-smartwatch\\build\\intermediates\\exploded-aar\\com.google.android.support\\wearable\\2.0.0-beta1\\res\\values-v23\\values.xml",
                     "position": {
                         "startLine": 20,
                         "startColumn": 0,

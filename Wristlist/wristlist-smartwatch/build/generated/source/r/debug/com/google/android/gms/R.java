@@ -18,16 +18,16 @@ public final class R {
 		public static final int scopeUris = 0x7f010040;
 	}
 	public static final class color {
-		public static final int common_google_signin_btn_text_dark = 0x7f0f0029;
-		public static final int common_google_signin_btn_text_dark_default = 0x7f0f000a;
-		public static final int common_google_signin_btn_text_dark_disabled = 0x7f0f000b;
-		public static final int common_google_signin_btn_text_dark_focused = 0x7f0f000c;
-		public static final int common_google_signin_btn_text_dark_pressed = 0x7f0f000d;
-		public static final int common_google_signin_btn_text_light = 0x7f0f002a;
-		public static final int common_google_signin_btn_text_light_default = 0x7f0f000e;
-		public static final int common_google_signin_btn_text_light_disabled = 0x7f0f000f;
-		public static final int common_google_signin_btn_text_light_focused = 0x7f0f0010;
-		public static final int common_google_signin_btn_text_light_pressed = 0x7f0f0011;
+		public static final int common_google_signin_btn_text_dark = 0x7f0f002f;
+		public static final int common_google_signin_btn_text_dark_default = 0x7f0f0010;
+		public static final int common_google_signin_btn_text_dark_disabled = 0x7f0f0011;
+		public static final int common_google_signin_btn_text_dark_focused = 0x7f0f0012;
+		public static final int common_google_signin_btn_text_dark_pressed = 0x7f0f0013;
+		public static final int common_google_signin_btn_text_light = 0x7f0f0030;
+		public static final int common_google_signin_btn_text_light_default = 0x7f0f0014;
+		public static final int common_google_signin_btn_text_light_disabled = 0x7f0f0015;
+		public static final int common_google_signin_btn_text_light_focused = 0x7f0f0016;
+		public static final int common_google_signin_btn_text_light_pressed = 0x7f0f0017;
 	}
 	public static final class dimen {
 	}
@@ -64,7 +64,7 @@ public final class R {
 		public static final int light = 0x7f100017;
 		public static final int none = 0x7f10000c;
 		public static final int standard = 0x7f100013;
-		public static final int text = 0x7f100037;
+		public static final int text = 0x7f100029;
 		public static final int wide = 0x7f100014;
 	}
 	public static final class integer {

@@ -3,4 +3,6 @@
 
     <string name="orders">Orders</string>
     <string name="profile">Account</string>
+    <string name="title_activity_test">TestActivity</string>
+    <string name="hello_world">Hello World!</string>
 </resources>

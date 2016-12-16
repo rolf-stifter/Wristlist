@@ -17,6 +17,12 @@
     <color name="circular_button_disabled">@color/grey</color>
     <color name="circular_button_normal">#0288D1</color>
     <color name="circular_button_pressed">#01579B</color>
+    <color name="colorAccent">#FF4081</color>
+    <color name="colorError">#cc0000</color>
+    <color name="colorPrimary">#586CA5</color>
+    <color name="colorPrimaryDark">#305aa3</color>
+    <color name="colorPrimaryLight">#7887B5</color>
+    <color name="colorPrimaryVariant">#9FA7C8</color>
     <color name="common_google_signin_btn_text_dark_default">@android:color/white</color>
     <color name="common_google_signin_btn_text_dark_disabled">#1F000000</color>
     <color name="common_google_signin_btn_text_dark_focused">@android:color/black</color>
@@ -249,12 +255,14 @@
     <string name="dismiss_overlay_button_label">Quit</string>
     <string name="generic_cancel">Cancel</string>
     <string name="generic_yes">Yes</string>
+    <string name="hello_world">Hello World!</string>
     <string name="navigation_drawer_content_description">Navigation drawer</string>
     <string name="orders">Orders</string>
     <string name="profile">Account</string>
     <string name="time_difference_now">now</string>
     <string name="time_difference_short_days_and_hours"><ns1:g example="3d" id="short_days">%1$s</ns1:g> <ns1:g example="13h" id="short_hours">%2$s</ns1:g></string>
     <string name="time_difference_short_hours_and_minutes"><ns1:g example="13h" id="short_hours">%1$s</ns1:g> <ns1:g example="58m" id="short_minutes">%2$s</ns1:g></string>
+    <string name="title_activity_test">TestActivity</string>
     <style name="ConfirmationActivity" parent="android:Theme.Translucent.NoTitleBar.Fullscreen">
 <item name="android:activityOpenEnterAnimation">@null</item>
 <item name="android:windowAnimationStyle">@null</item>
