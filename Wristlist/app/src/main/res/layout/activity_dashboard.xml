@@ -27,4 +27,9 @@
         android:id="@+id/fragment_profile"
         class = "be.pxl.elision.wristlist.View.Dashboard.ProfileCardFragment"
         android:layout_marginTop="16dp"/>
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Notification"
+        android:id="@+id/button_notification"/>
 </LinearLayout>
