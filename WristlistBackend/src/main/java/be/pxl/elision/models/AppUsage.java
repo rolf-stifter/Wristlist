@@ -18,16 +18,18 @@ public class AppUsage {
     //CONSTRUCTORS
     public AppUsage(){}
 
-    public AppUsage(Date time_used, Date measured){
-        this.time_used = time_used;
+    public AppUsage(Date timeUsed, Date measured, String userId){
+        this.timeUsed = timeUsed;
         this.measured = measured;
+        this.userId = userId;
     }
 
     //PROPERTIES
     @Id
     private String id;
-    private Date time_used;
+    private Date timeUsed;
     private Date measured;
+    private String userId;
 
     //GETTERS AND SETTERS
     public String getId() {
@@ -39,11 +41,11 @@ public class AppUsage {
     }
 
     public Date getTime_used() {
-        return time_used;
+        return timeUsed;
     }
 
     public void setTime_used(Date time_used) {
-        this.time_used = time_used;
+        this.timeUsed = time_used;
     }
 
     public Date getMeasured() {
@@ -52,5 +54,13 @@ public class AppUsage {
 
     public void setMeasured(Date measured) {
         this.measured = measured;
+    }
+
+    public String getUserId() {
+        return userId;
+    }
+
+    public void setUserId(String userId) {
+        this.userId = userId;
     }
 }

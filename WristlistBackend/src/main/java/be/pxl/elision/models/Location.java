@@ -16,11 +16,13 @@ public class Location {
     //CONSTRUCTORS
     public Location(){}
 
-    public Location(double x_coordinate, double y_coordinate, double z_coordinate, Date measured){
+    public Location(double x_coordinate, double y_coordinate, double z_coordinate, Date measured, String userId){
         this.x_coordinate = x_coordinate;
         this.y_coordinate = y_coordinate;
         this.z_coordinate = z_coordinate;
         this.measured = measured;
+        this.userId = userId;
+
     }
 
     //PROPERTIES
@@ -30,6 +32,7 @@ public class Location {
     private double y_coordinate;
     private double z_coordinate;
     private Date measured;
+    private String userId;
 
     //GETTERS AND SETTERS
     public String getId() {
@@ -70,5 +73,13 @@ public class Location {
 
     public void setMeasured(Date measured) {
         this.measured = measured;
+    }
+
+    public String getUserId() {
+        return userId;
+    }
+
+    public void setUserId(String userId) {
+        this.userId = userId;
     }
 }

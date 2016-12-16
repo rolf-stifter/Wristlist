@@ -32,13 +32,13 @@ public class NotificationRepositoryIntegrationTest {
     @Before
     public void setUp() throws Exception {
         cal = Calendar.getInstance();
-        notification = new Notification("TEST", cal.getTime());
+        notification = new Notification("TEST", cal.getTime(), "12345");
         repository.save(notification);
     }
 
     @Test
     public void canAddLocation() throws Exception{
-        Notification notification2 = new Notification("TEST", cal.getTime());
+        Notification notification2 = new Notification("TEST", cal.getTime(), "12345");
         repository.save(notification2);
         List<Notification> notificationList = repository.findAll();
 
@@ -48,7 +48,7 @@ public class NotificationRepositoryIntegrationTest {
     @Test
     public void lastAdded() throws Exception{
         cal.add(Calendar.MINUTE, 1);
-        Notification notification2 = new Notification("TEST", cal.getTime());
+        Notification notification2 = new Notification("TEST", cal.getTime(), "12345");
         repository.save(notification2);
         List<Notification> notificationList = repository.findAll();
         String id = notificationList.get(1).getId();

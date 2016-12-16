@@ -7,7 +7,7 @@ public class Product {
     public String description;
     public Stock stock;
     public Double averageRating;
-    public Double numberOfReviews;
+
     public String summary;
     public Price price;
     public List<Image> images;

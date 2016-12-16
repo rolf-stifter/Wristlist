@@ -16,16 +16,19 @@ public class Notification {
     //CONSTRUCTORS
     public Notification(){}
 
-    public Notification(String category_name, Date measured){
-        this.category_name = category_name;
+    public Notification(String categoryName, Date measured, String userId){
+        this.categoryName = categoryName;
         this. measured = measured;
+        this.userId = userId;
+
     }
 
     //PROPERTIES
     @Id
     private String id;
-    private String category_name;
+    private String categoryName;
     private Date measured;
+    private String userId;
 
     //GETTERS AND SETTERS
     public String getId() {
@@ -37,11 +40,11 @@ public class Notification {
     }
 
     public String getCategory_name() {
-        return category_name;
+        return categoryName;
     }
 
-    public void setCategory_name(String category_name) {
-        this.category_name = category_name;
+    public void setCategory_name(String categoryName) {
+        this.categoryName = categoryName;
     }
 
     public Date getMeasured() {
@@ -50,5 +53,13 @@ public class Notification {
 
     public void setMeasured(Date measured) {
         this.measured = measured;
+    }
+
+    public String getUserId() {
+        return userId;
+    }
+
+    public void setUserId(String userId) {
+        this.userId = userId;
     }
 }

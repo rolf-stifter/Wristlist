@@ -32,13 +32,13 @@ public class AppUsageRepositoryIntegrationTest {
     @Before
     public void setUp() throws Exception {
         cal = Calendar.getInstance();
-        appUsage = new AppUsage(new Timestamp(12345), cal.getTime());
+        appUsage = new AppUsage(new Timestamp(12345), cal.getTime(), "12345");
         repository.save(appUsage);
     }
 
     @Test
     public void canAddAppUsage() throws Exception{
-        AppUsage appUsage2 = new AppUsage(new Timestamp(12345), cal.getTime());
+        AppUsage appUsage2 = new AppUsage(new Timestamp(12345), cal.getTime(), "12345");
         repository.save(appUsage2);
         List<AppUsage> appUsageList = repository.findAll();
         Assert.assertFalse(appUsageList.get(1).getId().equals(appUsageList.get(0).getId()));
@@ -47,7 +47,7 @@ public class AppUsageRepositoryIntegrationTest {
     @Test
     public void lastAdded() throws Exception{
         cal.add(Calendar.MINUTE, 1);
-        AppUsage appUsage2 = new AppUsage(new Timestamp(12345), cal.getTime());
+        AppUsage appUsage2 = new AppUsage(new Timestamp(12345), cal.getTime(), "12345");
         repository.save(appUsage2);
         List<AppUsage> appUsageList = repository.findAll();
         String id = appUsageList.get(1).getId();

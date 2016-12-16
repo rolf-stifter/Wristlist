@@ -31,13 +31,13 @@ public class LocationRepositoryIntegrationTest {
     @Before
     public void setUp() throws Exception {
         cal = Calendar.getInstance();
-        location = new Location(2.2, 2.2, 2.2, cal.getTime());
+        location = new Location(2.2, 2.2, 2.2, cal.getTime(), "12345");
         repository.save(location);
     }
 
     @Test
     public void canAddLocation() throws Exception{
-        Location location2 = new Location(2.2, 2.2, 2.2, cal.getTime());
+        Location location2 = new Location(2.2, 2.2, 2.2, cal.getTime(), "12345");
         repository.save(location2);
         List<Location> locationList = repository.findAll();
 
@@ -47,7 +47,7 @@ public class LocationRepositoryIntegrationTest {
     @Test
     public void lastAdded() throws Exception{
         cal.add(Calendar.MINUTE, 1);
-        Location location2 = new Location(2.2, 2.2, 2.2, cal.getTime());
+        Location location2 = new Location(2.2, 2.2, 2.2, cal.getTime(), "12345");
         repository.save(location2);
         List<Location> locationList = repository.findAll();
         String id = locationList.get(1).getId();

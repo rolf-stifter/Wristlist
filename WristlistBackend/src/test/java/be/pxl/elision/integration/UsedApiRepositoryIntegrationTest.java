@@ -32,13 +32,13 @@ public class UsedApiRepositoryIntegrationTest {
     @Before
     public void setUp() throws Exception {
         cal = Calendar.getInstance();
-        usedApi = new UsedApi("TEST", cal.getTime());
+        usedApi = new UsedApi("TEST", cal.getTime(), "12345");
         repository.save(usedApi);
     }
 
     @Test
     public void canAddLocation() throws Exception{
-        UsedApi usedApi = new UsedApi("TEST", cal.getTime());
+        UsedApi usedApi = new UsedApi("TEST", cal.getTime(), "12345");
         repository.save(usedApi);
         List<UsedApi> usedApiList = repository.findAll();
 
@@ -48,7 +48,7 @@ public class UsedApiRepositoryIntegrationTest {
     @Test
     public void lastAdded() throws Exception{
         cal.add(Calendar.MINUTE, 1);
-        UsedApi usedApi2 = new UsedApi("TEST", cal.getTime());
+        UsedApi usedApi2 = new UsedApi("TEST", cal.getTime(), "12345");
         repository.save(usedApi2);
         List<UsedApi> notificationList = repository.findAll();
         String id = notificationList.get(1).getId();

@@ -48,7 +48,7 @@ public class AppUsageServiceTest {
     @Test
     public void testFindAll(){
         List<AppUsage> appUsages = new ArrayList<>();
-        appUsages.add(new AppUsage(new Timestamp(12345), firstDate));
+        appUsages.add(new AppUsage(new Timestamp(12345), firstDate, "12345"));
         when(repositoryMock.findAll()).thenReturn(appUsages);
 
         Assert.assertSame(serviceMock.getAll(), appUsages);
@@ -57,7 +57,7 @@ public class AppUsageServiceTest {
     @Test
     public void testFindAllBetweenDates(){
         List<AppUsage> appUsages = new ArrayList<>();
-        appUsages.add(new AppUsage(new Timestamp(12345), firstDate));
+        appUsages.add(new AppUsage(new Timestamp(12345), firstDate, "12345"));
         cal.add(Calendar.MINUTE, -5);
         secondDate = cal.getTime();
         cal.add(Calendar.MINUTE, 10);
@@ -69,14 +69,14 @@ public class AppUsageServiceTest {
 
     @Test
     public void AddNew(){
-        AppUsage appUsage = new AppUsage(new Timestamp(12345), firstDate);
+        AppUsage appUsage = new AppUsage(new Timestamp(12345), firstDate, "12345");
         serviceMock.addNew(appUsage);
         Mockito.verify(repositoryMock).save(appUsage);
     }
 
     @Test
     public void deleteAll(){
-        AppUsage appUsage = new AppUsage(new Timestamp(12345), firstDate);
+        AppUsage appUsage = new AppUsage(new Timestamp(12345), firstDate, "12345");
         serviceMock.addNew(appUsage);
         serviceMock.deleteAll();
         Mockito.verify(repositoryMock).deleteAll();

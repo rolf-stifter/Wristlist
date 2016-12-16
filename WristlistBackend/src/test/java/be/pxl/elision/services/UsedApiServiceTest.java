@@ -49,7 +49,7 @@ public class UsedApiServiceTest {
     @Test
     public void testFindAll(){
         List<UsedApi> usedApis = new ArrayList<>();
-        usedApis.add(new UsedApi("TEST", firstDate));
+        usedApis.add(new UsedApi("TEST", firstDate, "12345"));
         when(repositoryMock.findAll()).thenReturn(usedApis);
 
         Assert.assertSame(serviceMock.getAll(), usedApis);
@@ -59,7 +59,7 @@ public class UsedApiServiceTest {
     @Test
     public void testFindAllBetweenDates(){
         List<UsedApi> usedApis = new ArrayList<>();
-        usedApis.add(new UsedApi("TEST", firstDate));
+        usedApis.add(new UsedApi("TEST", firstDate, "12345"));
         cal.add(Calendar.MINUTE, -5);
         secondDate = cal.getTime();
         cal.add(Calendar.MINUTE, 10);
@@ -71,14 +71,14 @@ public class UsedApiServiceTest {
 
     @Test
     public void AddNew(){
-        UsedApi usedApi = new UsedApi("TEST", firstDate);
+        UsedApi usedApi = new UsedApi("TEST", firstDate, "12345");
         serviceMock.addNew(usedApi);
         Mockito.verify(repositoryMock).save(usedApi);
     }
 
     @Test
     public void deleteAll(){
-        UsedApi usedApi = new UsedApi("TEST", firstDate);
+        UsedApi usedApi = new UsedApi("TEST", firstDate, "12345");
         serviceMock.addNew(usedApi);
         serviceMock.deleteAll();
         Mockito.verify(repositoryMock).deleteAll();

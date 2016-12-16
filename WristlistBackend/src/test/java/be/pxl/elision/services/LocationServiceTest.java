@@ -48,7 +48,7 @@ public class LocationServiceTest {
     @Test
     public void testFindAll(){
         List<Location> locations = new ArrayList<>();
-        locations.add(new Location(2.2, 2.2, 2.2, firstDate));
+        locations.add(new Location(2.2, 2.2, 2.2, firstDate, "12345"));
         when(repositoryMock.findAll()).thenReturn(locations);
 
         Assert.assertSame(serviceMock.getAll(), locations);
@@ -57,7 +57,7 @@ public class LocationServiceTest {
     @Test
     public void testFindAllBetweenDates(){
         List<Location> locations = new ArrayList<>();
-        locations.add(new Location(2.2, 2.2, 2.2, firstDate));
+        locations.add(new Location(2.2, 2.2, 2.2, firstDate, "12345"));
         cal.add(Calendar.MINUTE, -5);
         secondDate = cal.getTime();
         cal.add(Calendar.MINUTE, 10);
@@ -69,14 +69,14 @@ public class LocationServiceTest {
 
     @Test
     public void AddNew(){
-        Location location = new Location(2.2, 2.2, 2.2, firstDate);
+        Location location = new Location(2.2, 2.2, 2.2, firstDate, "12345");
         serviceMock.addNew(location);
         Mockito.verify(repositoryMock).save(location);
     }
 
     @Test
     public void deleteAll(){
-        Location location = new Location(2.2, 2.2, 2.2, firstDate);
+        Location location = new Location(2.2, 2.2, 2.2, firstDate, "12345");
         serviceMock.addNew(location);
         serviceMock.deleteAll();
         Mockito.verify(repositoryMock).deleteAll();

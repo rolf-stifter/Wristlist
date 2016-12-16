@@ -25,7 +25,7 @@ public class AppUsageTest {
         cal = Calendar.getInstance();
         now = cal.getTime();
 
-        appUsage = new AppUsage(new Timestamp(12345), now);
+        appUsage = new AppUsage(new Timestamp(12345), now, "12345");
 
     }
 

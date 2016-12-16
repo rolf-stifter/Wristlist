@@ -49,7 +49,7 @@ public class NotificationServiceTest {
     @Test
     public void testFindAll(){
         List<Notification> notifications = new ArrayList<>();
-        notifications.add(new Notification("TEST", firstDate));
+        notifications.add(new Notification("TEST", firstDate, "12345"));
         when(repositoryMock.findAll()).thenReturn(notifications);
 
         Assert.assertSame(serviceMock.getAll(), notifications);
@@ -59,7 +59,7 @@ public class NotificationServiceTest {
     @Test
     public void testFindAllBetweenDates(){
         List<Notification> notifications = new ArrayList<>();
-        notifications.add(new Notification("TEST", firstDate));
+        notifications.add(new Notification("TEST", firstDate, "12345"));
         cal.add(Calendar.MINUTE, -5);
         secondDate = cal.getTime();
         cal.add(Calendar.MINUTE, 10);
@@ -71,14 +71,14 @@ public class NotificationServiceTest {
 
     @Test
     public void AddNew(){
-        Notification notification = new Notification("TEST", firstDate);
+        Notification notification = new Notification("TEST", firstDate, "12345");
         serviceMock.addNew(notification);
         Mockito.verify(repositoryMock).save(notification);
     }
 
     @Test
     public void deleteAll(){
-        Notification notification = new Notification("TEST", firstDate);
+        Notification notification = new Notification("TEST", firstDate, "12345");
         serviceMock.addNew(notification);
         serviceMock.deleteAll();
         Mockito.verify(repositoryMock).deleteAll();

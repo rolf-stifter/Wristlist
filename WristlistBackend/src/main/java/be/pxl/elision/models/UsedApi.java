@@ -16,16 +16,19 @@ public class UsedApi {
     //CONSTRUCTORS
     public UsedApi(){}
 
-    public UsedApi(String api_name, Date measured){
-        this.api_name = api_name;
+    public UsedApi(String apiName, Date measured, String userId){
+        this.apiName = apiName;
         this.measured = measured;
+        this.userId = userId;
+
     }
 
     //PROPERTIES
     @Id
     private String id;
-    private String api_name;
+    private String apiName;
     private Date measured;
+    private String userId;
 
     //GETTERS AND SETTERS
 
@@ -38,11 +41,11 @@ public class UsedApi {
     }
 
     public String getApi_name() {
-        return api_name;
+        return apiName;
     }
 
-    public void setApi_name(String api_name) {
-        this.api_name = api_name;
+    public void setApi_name(String apiName) {
+        this.apiName = apiName;
     }
 
     public Date getMeasured() {
@@ -51,5 +54,13 @@ public class UsedApi {
 
     public void setMeasured(Date measured) {
         this.measured = measured;
+    }
+
+    public String getUserId() {
+        return userId;
+    }
+
+    public void setUserId(String userId) {
+        this.userId = userId;
     }
 }

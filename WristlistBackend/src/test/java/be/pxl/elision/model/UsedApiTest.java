@@ -15,7 +15,7 @@ public class UsedApiTest {
 
     @Before
     public void init(){
-        usedApi = new UsedApi("TEST", new Timestamp(12345));
+        usedApi = new UsedApi("TEST", new Timestamp(12345), "12345");
     }
 
     @Test

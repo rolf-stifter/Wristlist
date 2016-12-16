@@ -16,7 +16,7 @@ public class NotificationTest {
 
     @Before
     public void init(){
-        notification = new Notification("TEST", new Timestamp(12345));
+        notification = new Notification("TEST", new Timestamp(12345), "12345");
     }
 
     @Test

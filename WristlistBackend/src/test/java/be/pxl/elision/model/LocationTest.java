@@ -15,7 +15,7 @@ public class LocationTest {
 
     @Before
     public void init(){
-        location = new Location(2.2,2.2,2.2,new Timestamp(12345));
+        location = new Location(2.2,2.2,2.2,new Timestamp(12345), "12345");
     }
 
     @Test
