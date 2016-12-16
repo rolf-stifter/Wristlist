@@ -32,7 +32,11 @@ public class DashboardActivity extends BaseDrawerActivity {
         ((Button) findViewById(R.id.button_notification)).setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                NotificationHelper.showNotification(view.getContext(), R.drawable.logo, null, new Random().nextInt(), "Product in stock", "Product bbbbbb is in stock", new Intent(view.getContext(), DashboardActivity.class), new long[]{100,100,100,100,100}, new NotificationCompat.Action[]{});
+                NotificationHelper.showNotification(view.getContext(),
+                        R.drawable.logo, null, new Random().nextInt(),
+                        "Product in stock", "Product bbbbbb is in stock",
+                        new Intent(view.getContext(), DashboardActivity.class),
+                        new long[]{100,100,100,100,100}, new NotificationCompat.Action[]{});
             }
         });
     }
