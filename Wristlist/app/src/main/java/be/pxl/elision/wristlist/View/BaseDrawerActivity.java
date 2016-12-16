@@ -10,9 +10,9 @@ import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.view.MenuItem;
 import android.widget.FrameLayout;
-import android.widget.TextView;
 import be.pxl.elision.wristlist.R;
 import be.pxl.elision.wristlist.View.Dashboard.DashboardActivity;
+import be.pxl.elision.wristlist.View.Login.LoginActivity;
 import be.pxl.elision.wristlist.View.Orders.OrdersActivity;
 import be.pxl.elision.wristlist.View.Profile.ProfileActivity;
 
@@ -93,15 +93,22 @@ public abstract class BaseDrawerActivity extends AppCompatActivity
             return false;
         }
 
-        if (id == R.id.nav_dashboard) {
-            Intent dashboard = new Intent(getApplicationContext(), DashboardActivity.class);
-            startActivity(dashboard);
-        } else if (id == R.id.nav_profile) {
-            Intent profile = new Intent(getApplicationContext(), ProfileActivity.class);
-            startActivity(profile);
-        }else if (id == R.id.nav_orders) {
-            Intent profile = new Intent(getApplicationContext(), OrdersActivity.class);
-            startActivity(profile);
+        switch (id) {
+            case R.id.nav_dashboard:
+                Intent dashboard = new Intent(getApplicationContext(), DashboardActivity.class);
+                startActivity(dashboard);
+                break;
+            case R.id.nav_profile:
+                Intent profile = new Intent(getApplicationContext(), ProfileActivity.class);
+                startActivity(profile);
+                break;
+            case R.id.nav_orders:
+                Intent orders = new Intent(getApplicationContext(), OrdersActivity.class);
+                startActivity(orders);
+                break;
+            case R.id.nav_sign_off:
+                Intent login = new Intent(getApplicationContext(), LoginActivity.class);
+                startActivity(login);
         }
         this.overridePendingTransition(0, 0);
 
