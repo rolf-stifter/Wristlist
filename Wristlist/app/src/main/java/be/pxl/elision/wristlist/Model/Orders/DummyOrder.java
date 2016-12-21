@@ -2,6 +2,8 @@ package be.pxl.elision.wristlist.Model.Orders;
 
 import java.util.List;
 
+import be.pxl.elision.wristlist.Model.Profile.Address;
+
 /**
  * Created by 11400081 on 9/12/2016.
  */
@@ -10,7 +12,9 @@ public class DummyOrder {
     private String name;
     private String status;
     private String date;
+    private Double price;
     private List<DummyProduct> orders;
+    private Address address;
 
 
     public DummyOrder() {
@@ -46,5 +50,21 @@ public class DummyOrder {
 
     public void setOrders(List<DummyProduct> orders) {
         this.orders = orders;
+    }
+
+    public Address getAddress() {
+        return address;
+    }
+
+    public void setAddress(Address address) {
+        this.address = address;
+    }
+
+    public Double getPrice() {
+        return price;
+    }
+
+    public void setPrice(Double price) {
+        this.price = price;
     }
 }

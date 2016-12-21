@@ -1,7 +1,6 @@
 package be.pxl.elision.wristlist.View.Order;
 
 import android.app.Fragment;
-import android.content.Intent;
 import android.os.Bundle;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
@@ -18,8 +17,9 @@ import java.util.List;
 
 import be.pxl.elision.wristlist.Model.Orders.DummyOrder;
 import be.pxl.elision.wristlist.Model.Orders.DummyProduct;
+import be.pxl.elision.wristlist.Model.Profile.Address;
+import be.pxl.elision.wristlist.Model.Profile.Region;
 import be.pxl.elision.wristlist.R;
-import be.pxl.elision.wristlist.View.Orders.OrdersActivity;
 
 
 /**
@@ -46,6 +46,15 @@ public class OrderFragment extends Fragment {
         dummyOrder.setName("Bestelling 3");
         dummyOrder.setDate("01/01/2017");
         dummyOrder.setStatus("In verwerking");
+        dummyOrder.setPrice(899.99);
+
+        Address a = new Address();
+        a.setLine1("Ven 26");
+        a.setTown("Maaseik");
+        Region r = new Region();
+        r.setName("Limburg");
+        a.setRegion(r);
+        dummyOrder.setAddress(a);
 
         DummyProduct p1 = new DummyProduct();
         p1.setName("T-shirt");
@@ -58,7 +67,7 @@ public class OrderFragment extends Fragment {
         View card = getActivity().getLayoutInflater().inflate(R.layout.card_view, null);
         title = (TextView) card.findViewById(R.id.card_title);
 //        title.setText(dummyOrder.getName());
-        title.setText("Order");
+        title.setText("Products");
         ImageView icon = (ImageView) card.findViewById(R.id.card_icon);
         icon.setImageResource(R.drawable.ic_shopping_cart_white);
 
@@ -68,13 +77,17 @@ public class OrderFragment extends Fragment {
 
         //Click header card
         LinearLayout header = (LinearLayout) card.findViewById(R.id.card_header);
-        header.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Intent profile = new Intent(getActivity(), OrdersActivity.class);
-                startActivity(profile);
-            }
-        });
+
+        //Order status details
+        View childOrderDetails = getActivity().getLayoutInflater().inflate(R.layout.order_details, null);
+        ((TextView)childOrderDetails.findViewById(R.id.order_detail_status)).setText(dummyOrder.getStatus());
+        ((TextView)childOrderDetails.findViewById(R.id.order_detail_price)).setText("€ " +dummyOrder.getPrice());
+        ((TextView)childOrderDetails.findViewById(R.id.order_detail_date)).setText(dummyOrder.getDate());
+        ((TextView)childOrderDetails.findViewById(R.id.order_detail_street_number)).setText(dummyOrder.getAddress().getLine1());
+        ((TextView)childOrderDetails.findViewById(R.id.order_detail_city)).setText(dummyOrder.getAddress().getTown());
+        ((TextView)childOrderDetails.findViewById(R.id.order_detail_country)).setText(dummyOrder.getAddress().getRegion().getName());
+
+        //Products
         mRecyclerView = (RecyclerView) childDetails.findViewById(R.id.my_recycler_view);
 
         // use this setting to improve performance if you know that changes
@@ -85,11 +98,8 @@ public class OrderFragment extends Fragment {
         mLayoutManager = new LinearLayoutManager(getActivity());
         mRecyclerView.setLayoutManager(mLayoutManager);
 
-
-
         mAdapter = new ProductRecyclerViewAdapter(null);
         mRecyclerView.setAdapter(mAdapter);
-
 
         details.addView(childDetails);
         return card;
@@ -98,11 +108,9 @@ public class OrderFragment extends Fragment {
     /**
      * Set Adapter with products and set card title with name
      * @param products
-     * @param name
      */
-    public void NewData(List<DummyProduct> products, String name ) {
+    public void NewData(List<DummyProduct> products) {
         mAdapter = new ProductRecyclerViewAdapter(products);
         mRecyclerView.setAdapter(mAdapter);
-        title.setText(name);
     }
 }

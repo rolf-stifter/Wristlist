@@ -9,6 +9,8 @@ import java.util.Arrays;
 
 import be.pxl.elision.wristlist.Model.Orders.DummyOrder;
 import be.pxl.elision.wristlist.Model.Orders.DummyProduct;
+import be.pxl.elision.wristlist.Model.Profile.Address;
+import be.pxl.elision.wristlist.Model.Profile.Region;
 import be.pxl.elision.wristlist.R;
 import be.pxl.elision.wristlist.View.BaseDrawerActivity;
 
@@ -28,16 +30,26 @@ public class OrderActivity extends BaseDrawerActivity {
         getLayoutInflater().inflate(R.layout.activity_order, (FrameLayout) findViewById(R.id.baseFrame));
 
 
-        String name = getIntent().getStringExtra("Orders");
-        setToolbarTitle(name);
+//        String name = getIntent().getStringExtra("Orders");
+        setToolbarTitle("Order details");
 
         FragmentManager manager = getFragmentManager();
         OrderFragment of = (OrderFragment) manager.findFragmentById(R.id.fragment_order);
-        //data
+        OrderDetailFragment odf = (OrderDetailFragment) manager.findFragmentById(R.id.fragment_order_detail);
+//        data
         DummyOrder dummyOrder = new DummyOrder();
         dummyOrder.setName("Bestelling 3");
         dummyOrder.setDate("01/01/2017");
         dummyOrder.setStatus("In verwerking");
+        dummyOrder.setPrice(899.99);
+
+        Address a = new Address();
+        a.setLine1("Ven 26");
+        a.setTown("Maaseik");
+        Region r = new Region();
+        r.setName("Limburg");
+        a.setRegion(r);
+        dummyOrder.setAddress(a);
 
         DummyProduct p1 = new DummyProduct();
         p1.setName("T-shirt");
@@ -56,7 +68,8 @@ public class OrderActivity extends BaseDrawerActivity {
         p4.setPrice(9.99);
         DummyProduct[] products3 = {p1,p2,p3,p4,p1,p2};
         dummyOrder.setOrders( new ArrayList<DummyProduct>(Arrays.asList(products3)));
-        of.NewData(dummyOrder.getOrders(), name);
+        of.NewData(dummyOrder.getOrders());
+        odf.NewData(dummyOrder);
     }
 
     /**
